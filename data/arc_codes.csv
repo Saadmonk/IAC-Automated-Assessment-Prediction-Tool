@@ -1,0 +1,578 @@
+ARC_CODE,DESCRIPTION,ARC_2DIGIT,CATEGORY_NAME,SUBCATEGORY
+2.1111,Control pressure on steamer operations,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1112,Heat oil to proper temperature for good atomization,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1113,Reduce combustion air flow to optimum,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1114,Limit and control secondary combustion air in furnace,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1115,Eliminate combustible gas in flue gas,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1116,Improve combustion control capability,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1117,Relocate oven/furnace to more efficient location,2.1,Combustion Systems,Furnaces/Ovens - Operations
+2.1121,Use insulation in furnaces to facilitate heating/cooling,2.1,Combustion Systems,Furnaces/Ovens - Hardware
+2.1122,Re-size charging openings or add a movable door on equipment,2.1,Combustion Systems,Furnaces/Ovens - Hardware
+2.1123,Install automatic stack damper,2.1,Combustion Systems,Furnaces/Ovens - Hardware
+2.1124,Replace direct fired equipment with steam heat,2.1,Combustion Systems,Furnaces/Ovens - Hardware
+2.1125,Convert to oxy-fuel burners,2.1,Combustion Systems,Furnaces/Ovens - Hardware
+2.1131,"Repair faulty insulation in furnaces, boilers, etc.",2.1,Combustion Systems,Furnaces/Ovens - Maintenance
+2.1132,Repair faulty louvers and dampers,2.1,Combustion Systems,Furnaces/Ovens - Maintenance
+2.1133,Adjust burners for efficient operation,2.1,Combustion Systems,Furnaces/Ovens - Maintenance
+2.1134,Eliminate leaks in combustible gas lines,2.1,Combustion Systems,Furnaces/Ovens - Maintenance
+2.1135,Repair furnaces and oven doors so that they seal efficiently,2.1,Combustion Systems,Furnaces/Ovens - Maintenance
+2.1211,Move boiler to more efficient location,2.1,Combustion Systems,Boilers - Operation
+2.1212,Operate boilers on high fire setting,2.1,Combustion Systems,Boilers - Operation
+2.1213,Direct warmest air to combustion intake,2.1,Combustion Systems,Boilers - Operation
+2.1221,Replace obsolete burners with more efficient ones,2.1,Combustion Systems,Boilers - Hardware
+2.1222,Install turbulators,2.1,Combustion Systems,Boilers - Hardware
+2.1223,Install smaller boiler (increase high fire duty cycle),2.1,Combustion Systems,Boilers - Hardware
+2.1224,Replace boiler,2.1,Combustion Systems,Boilers - Hardware
+2.1231,Establish burner maintenance schedule for boilers,2.1,Combustion Systems,Boilers - Maintenance
+2.1232,Keep boiler tubes clean,2.1,Combustion Systems,Boilers - Maintenance
+2.1233,Analyze flue gas for proper air/fuel ratio,2.1,Combustion Systems,Boilers - Maintenance
+2.1241,Reduce excessive boiler blowdown,2.1,Combustion Systems,Boilers - Blowdown
+2.1242,Minimize boiler blowdown with better feedwater treatment,2.1,Combustion Systems,Boilers - Blowdown
+2.1243,Use heat from boiler blowdown to preheat boiler feed water,2.1,Combustion Systems,Boilers - Blowdown
+2.1311,Replace electrically-operated equipment with fossil fuel equipment,2.1,Combustion Systems,Fuel Switching - Electric to Fossil
+2.1321,Replace fossil fuel equipment with electrical equipment,2.1,Combustion Systems,Fuel Switching - Fossil to Electric
+2.1331,Burn a less expensive grade of fuel,2.1,Combustion Systems,Fuel Switching - Alternate Fuel
+2.1332,Convert combustion equipment to burn natural gas,2.1,Combustion Systems,Fuel Switching - Alternate Fuel
+2.1333,Convert combustion equipment to burn oil,2.1,Combustion Systems,Fuel Switching - Alternate Fuel
+2.1335,"Replace gasoline with diesel, LPG, or natural gas",2.1,Combustion Systems,Fuel Switching - Alternate Fuel
+2.1336,Install equipment to utilize waste fuel,2.1,Combustion Systems,Fuel Switching - Alternate Fuel
+2.1391,Replace purchased steam with electric heating,2.1,Combustion Systems,Fuel Switching - Misc
+2.1392,Replace purchased steam with other energy source,2.1,Combustion Systems,Fuel Switching - Misc
+2.1393,Use steam sparging or injections in place of indirect heating,2.1,Combustion Systems,Fuel Switching - Misc
+2.1394,Replace steam jets on vacuum system with electric motor driven vacuum pumps,2.1,Combustion Systems,Fuel Switching - Misc
+2.2111,Install steam trap,2.2,Thermal Systems,Steam - Traps
+2.2112,Use correct size steam traps,2.2,Thermal Systems,Steam - Traps
+2.2113,Repair or replace steam traps,2.2,Thermal Systems,Steam - Traps
+2.2114,Shut off steam traps on superheated steam lines when not in use,2.2,Thermal Systems,Steam - Traps
+2.2121,Increase amount of condensate returned,2.2,Thermal Systems,Steam - Condensate
+2.2122,Install/repair insulation on condensate lines,2.2,Thermal Systems,Steam - Condensate
+2.2123,Insulate feedwater tank,2.2,Thermal Systems,Steam - Condensate
+2.2124,Install deaerator in place of condensate tank,2.2,Thermal Systems,Steam - Condensate
+2.2126,Lower operating pressure of condenser (steam),2.2,Thermal Systems,Steam - Condensate
+2.2127,Flash condensate to produce lower pressure steam,2.2,Thermal Systems,Steam - Condensate
+2.2128,Use steam condensate for hot water supply (non-potable),2.2,Thermal Systems,Steam - Condensate
+2.2134,Eliminate leaks in high pressure reducing stations,2.2,Thermal Systems,Steam - Leaks/Insulation
+2.2135,Repair and eliminate steam leaks,2.2,Thermal Systems,Steam - Leaks/Insulation
+2.2136,Install/repair insulation on steam lines,2.2,Thermal Systems,Steam - Leaks/Insulation
+2.2141,Operate distillation columns efficiently,2.2,Thermal Systems,Steam - Distillation
+2.2151,Clean steam coils in processing tanks,2.2,Thermal Systems,Steam - Maintenance
+2.2152,Maintain steam jets used for vacuum system,2.2,Thermal Systems,Steam - Maintenance
+2.2153,Close off unneeded steam lines,2.2,Thermal Systems,Steam - Maintenance
+2.2161,Optimize operation of multi-stage vacuum steam jets,2.2,Thermal Systems,Steam - Operations
+2.2162,Reduce excess steam bleeding,2.2,Thermal Systems,Steam - Operations
+2.2163,Use minimum steam operating pressure,2.2,Thermal Systems,Steam - Operations
+2.2164,Turn off steam tracing during mild weather,2.2,Thermal Systems,Steam - Operations
+2.2165,Substitute air for steam to atomize oil,2.2,Thermal Systems,Steam - Operations
+2.2191,Substitute hot process fluids for steam,2.2,Thermal Systems,Steam - Misc
+2.2192,Use heat exchange fluids instead of steam in pipeline tracing systems,2.2,Thermal Systems,Steam - Misc
+2.2211,Use optimum temperature,2.2,Thermal Systems,Heating - Operation
+2.2212,Use minimum safe oven ventilation,2.2,Thermal Systems,Heating - Operation
+2.2221,"Use immersion heating in tanks, melting pots, etc.",2.2,Thermal Systems,Heating - Hardware
+2.2222,Convert liquid heaters from underfiring to immersion or submersion heating,2.2,Thermal Systems,Heating - Hardware
+2.2223,Enhance sensitivity of temperature control and cutoff,2.2,Thermal Systems,Heating - Hardware
+2.2311,Heat treat parts only to required specifications or standards,2.2,Thermal Systems,Heat Treating
+2.2312,Minimize non-essential material in heat treatment process,2.2,Thermal Systems,Heat Treating
+2.2313,Use batch firing with kiln furniture specifically designed,2.2,Thermal Systems,Heat Treating
+2.2314,Replace heat treating oven with more efficient unit,2.2,Thermal Systems,Heat Treating
+2.2414,Use waste heat from hot flue gases to preheat,2.2,Thermal Systems,Heat Recovery - Flue Gas Recuperation
+2.2421,Install waste heat boiler to provide direct power,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2422,Use waste heat from hot flue gases to generate steam,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2423,Install waste heat boiler to produce steam,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2424,Use heat in flue gases to preheat products or materials,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2425,Use flue gases to heat process or service water,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2426,Use waste heat from flue gases to heat space conditioning air,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2427,Use waste heat from hot flue gases to preheat incoming fluids,2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2428,"Use flue gases in radiant heater for space heating, ovens, etc.",2.2,Thermal Systems,Heat Recovery - Flue Gas Other
+2.2437,Recover waste heat from equipment,2.2,Thermal Systems,Heat Recovery - Specific Equipment
+2.2441,Preheat boiler makeup water with waste process heat,2.2,Thermal Systems,Heat Recovery - Process Waste Heat
+2.2442,Preheat combustion air with waste heat,2.2,Thermal Systems,Heat Recovery - Process Waste Heat
+2.2443,Re-use or recycle hot or cold process exhaust air,2.2,Thermal Systems,Heat Recovery - Process Waste Heat
+2.2444,Use hot process fluids to preheat incoming process fluids,2.2,Thermal Systems,Heat Recovery - Process Waste Heat
+2.2447,Heat water with exhaust heat,2.2,Thermal Systems,Heat Recovery - Process Waste Heat
+2.2449,"Recover heat from exhausted steam, hot air or hot water",2.2,Thermal Systems,Heat Recovery - Process Waste Heat
+2.2491,Use cooling air which cools hot work pieces for space heating,2.2,Thermal Systems,Heat Recovery - Misc
+2.2492,Use heat wheel or other heat exchanger to cross-exchange building exhaust air with make-up air,2.2,Thermal Systems,Heat Recovery - Misc
+2.2511,Insulate bare equipment,2.2,Thermal Systems,Heat Containment - Insulation
+2.2514,Cover open tanks,2.2,Thermal Systems,Heat Containment - Insulation
+2.2515,Use optimum thickness insulation,2.2,Thermal Systems,Heat Containment - Insulation
+2.2521,Isolate steam lines to avoid heating air conditioned areas,2.2,Thermal Systems,Heat Containment - Isolation
+2.2522,Isolate hot or cold equipment,2.2,Thermal Systems,Heat Containment - Isolation
+2.2523,Reduce infiltration; isolate hot equipment from refrigerated areas,2.2,Thermal Systems,Heat Containment - Isolation
+2.2524,Avoid cooling of process streams or materials that must subsequently be heated,2.2,Thermal Systems,Heat Containment - Isolation
+2.2525,Eliminate cooling of process streams which subsequently must be heated and vice versa,2.2,Thermal Systems,Heat Containment - Isolation
+2.2531,Re-size charging openings or add movable cover or door,2.2,Thermal Systems,Heat Containment - Infiltration
+2.2532,Use only amount of air necessary to prevent explosion hazard,2.2,Thermal Systems,Heat Containment - Infiltration
+2.2533,Replace air curtain doors with solid doors,2.2,Thermal Systems,Heat Containment - Infiltration
+2.2611,Moderate cooling tower outlet temperature,2.2,Thermal Systems,Cooling - Cooling Towers
+2.2612,Use cooling tower water instead of refrigeration,2.2,Thermal Systems,Cooling - Cooling Towers
+2.2613,Use antifreeze in cooling towers to allow winter use,2.2,Thermal Systems,Cooling - Cooling Towers
+2.2614,Use cooling tower or economizer to replace chiller cooling,2.2,Thermal Systems,Cooling - Cooling Towers
+2.2615,Clean condenser tubes,2.2,Thermal Systems,Cooling - Cooling Towers
+2.2621,Modify refrigeration system to operate at a lower pressure,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2622,Replace existing chiller with high efficiency model,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2623,Minimize condenser cooling water temperature,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2624,Use cold waste water to cool chiller feed water,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2625,Chill water to the highest temperature possible,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2626,Avoid frost formation on evaporators,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2627,Use multiple-effect evaporators,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2628,Utilize a less expensive cooling method,2.2,Thermal Systems,Cooling - Chillers/Refrigeration
+2.2691,Shut off cooling if cold outside air will cool process,2.2,Thermal Systems,Cooling - Misc
+2.2692,Use outside cold water source as a supply of cooling water,2.2,Thermal Systems,Cooling - Misc
+2.2693,Use waste heat steam for absorption refrigeration,2.2,Thermal Systems,Cooling - Misc
+2.2694,Use highest temperature for chilling or cold storage,2.2,Thermal Systems,Cooling - Misc
+2.2695,Use cascade system of recirculating during cold weather to avoid sub-cooling,2.2,Thermal Systems,Cooling - Misc
+2.2696,Use excess cold process fluid for industrial cooling needs,2.2,Thermal Systems,Cooling - Misc
+2.2711,Utilize outside air instead of conditioned air for drying,2.2,Thermal Systems,Drying
+2.3111,Heat water during off-peak periods and store for later use,2.3,Electrical Power,Demand Mgmt - Thermal Storage
+2.3112,Store heated/cooled water for use during peak demand periods,2.3,Electrical Power,Demand Mgmt - Thermal Storage
+2.3113,Make ice during off peak hours for cooling,2.3,Electrical Power,Demand Mgmt - Thermal Storage
+2.3131,Reschedule plant operations or reduce load to avoid peaks,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3132,Recharge batteries during off-peak demand periods,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3133,Consider three or four days around-the-clock operation rather than one or two shifts per day,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3134,Shift from daytime to nighttime operation,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3135,Schedule routine maintenance during non-operating periods,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3136,Overlap custodial services with normal day hours,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3137,Use power during off-peak periods,2.3,Electrical Power,Demand Mgmt - Scheduling
+2.3141,Use batteries for demand control,2.3,Electrical Power,Demand Mgmt - Battery Storage
+2.3142,Use batteries for power quality issues,2.3,Electrical Power,Demand Mgmt - Battery Storage
+2.3191,Use demand controller or load shedder,2.3,Electrical Power,Demand Mgmt - Misc
+2.3192,Use fossil fuel powered generator during peak demand periods,2.3,Electrical Power,Demand Mgmt - Misc
+2.3212,Optimize plant power factor,2.3,Electrical Power,Power Factor
+2.3311,Replace DC equipment with AC equipment,2.3,Electrical Power,Generation - DC
+2.3312,Install efficient rectifiers,2.3,Electrical Power,Generation - DC
+2.3321,Use steam pressure reduction to generate power,2.3,Electrical Power,Generation - AC
+2.3322,Use existing dam to generate electricity,2.3,Electrical Power,Generation - AC
+2.3323,Install emissions controls to increase capacity,2.3,Electrical Power,Generation - AC
+2.3411,Replace electric motors with back pressure steam turbines and use exhaust steam for process heat,2.3,Electrical Power,Cogeneration
+2.3412,Use waste heat to produce steam to drive a steam turbine generator,2.3,Electrical Power,Cogeneration
+2.3413,Burn fossil fuel to produce steam to drive a steam turbine generator and use steam exhaust for heat,2.3,Electrical Power,Cogeneration
+2.3414,Burn waste to produce steam to drive a steam turbine generator set and use steam exhaust for heat,2.3,Electrical Power,Cogeneration
+2.3415,Use a fossil fuel engine to cogenerate electricity or motive power; and utilize heat,2.3,Electrical Power,Cogeneration
+2.3416,Use combined cycle gas turbine generator sets with waste heat boilers connected to turbine exhaust,2.3,Electrical Power,Cogeneration
+2.3417,Use waste heat with a closed-cycle gas turbine-generator set to cogenerate electricity and heat,2.3,Electrical Power,Cogeneration
+2.3511,Use plant owned transformers or lease transformers,2.3,Electrical Power,Transmission - Transformers
+2.3512,De-energize excess transformer capacity,2.3,Electrical Power,Transmission - Transformers
+2.3513,Consider power loss as well as initial loads and load growth in down-sizing transformers,2.3,Electrical Power,Transmission - Transformers
+2.3521,Reduce load on electrical conductor to reduce heating losses,2.3,Electrical Power,Transmission - Conductor Size
+2.3522,Increase electrical conductor size to reduce distribution losses,2.3,Electrical Power,Transmission - Conductor Size
+2.4111,Utilize energy-efficient belts and other improved mechanisms,2.4,Motor Systems,Motors - Operation
+2.4112,Install soft-start to eliminate nuisance trips,2.4,Motor Systems,Motors - Operation
+2.4113,Install motor voltage controller on lightly loaded motors,2.4,Motor Systems,Motors - Operation
+2.4132,Size electric motors for peak operating efficiency,2.4,Motor Systems,Motors - Hardware
+2.4133,Use most efficient type of electric motors,2.4,Motor Systems,Motors - Hardware
+2.4134,Replace electric motor with fossil fuel engine,2.4,Motor Systems,Motors - Hardware
+2.4145,Install isolation transformer on adjustable frequency drive,2.4,Motor Systems,Motors - Drives
+2.4146,Use adjustable frequency drive or multiple speed motors on existing system,2.4,Motor Systems,Motors - Drives
+2.4151,Develop a repair/replace policy,2.4,Motor Systems,Motors - Maintenance
+2.4152,Use only certified motor repair shops,2.4,Motor Systems,Motors - Maintenance
+2.4153,Avoid emergency rewind of motors,2.4,Motor Systems,Motors - Maintenance
+2.4154,Avoid rewinding motors more than twice,2.4,Motor Systems,Motors - Maintenance
+2.4155,Standardize motor inventory,2.4,Motor Systems,Motors - Maintenance
+2.4156,Establish a preventative maintenance program,2.4,Motor Systems,Motors - Maintenance
+2.4157,Establish a predictive maintenance program,2.4,Motor Systems,Motors - Maintenance
+2.4221,Install compressor air intakes in coolest locations,2.4,Motor Systems,Air Compressors - Hardware
+2.4222,Install adequate dryers on air lines to eliminate blowdown,2.4,Motor Systems,Air Compressors - Hardware
+2.4223,Install direct acting units in place of compressed air pressure system,2.4,Motor Systems,Air Compressors - Hardware
+2.4224,Upgrade controls on compressors,2.4,Motor Systems,Air Compressors - Hardware
+2.4225,Install common header on compressors,2.4,Motor Systems,Air Compressors - Hardware
+2.4226,Use/purchase optimum sized compressor,2.4,Motor Systems,Air Compressors - Hardware
+2.4227,Use compressor air filters,2.4,Motor Systems,Air Compressors - Hardware
+2.4231,Reduce the pressure of compressed air to the minimum required,2.4,Motor Systems,Air Compressors - Operations
+2.4234,Cool compressor air intake with heat exchanger,2.4,Motor Systems,Air Compressors - Operations
+2.4235,Remove or close off unneeded compressed air lines,2.4,Motor Systems,Air Compressors - Operations
+2.4236,Eliminate leaks in inert gas and compressed air lines/valves,2.4,Motor Systems,Air Compressors - Operations
+2.4237,Substitute compressed air cooling with water or air cooling,2.4,Motor Systems,Air Compressors - Operations
+2.4238,Do not use compressed air for personal cooling,2.4,Motor Systems,Air Compressors - Operations
+2.4239,Eliminate or reduce compressed air usage,2.4,Motor Systems,Air Compressors - Operations
+2.4311,Recover mechanical energy,2.4,Motor Systems,Other Equipment - Operations
+2.4312,Improve lubrication practices,2.4,Motor Systems,Other Equipment - Operations
+2.4313,Provide proper maintenance of motor driven equipment,2.4,Motor Systems,Other Equipment - Operations
+2.4314,Use synthetic lubricant,2.4,Motor Systems,Other Equipment - Operations
+2.4321,Upgrade obsolete equipment,2.4,Motor Systems,Other Equipment - Hardware
+2.4322,Use or replace with energy efficient substitutes,2.4,Motor Systems,Other Equipment - Hardware
+2.4323,Use optimum size and capacity equipment,2.4,Motor Systems,Other Equipment - Hardware
+2.4324,Replace hydraulic/pneumatic equipment with electric equipment,2.4,Motor Systems,Other Equipment - Hardware
+2.4325,Upgrade conveyors,2.4,Motor Systems,Other Equipment - Hardware
+2.5111,Convert from indirect to direct fired systems,2.5,Industrial Design,Systems - Thermal
+2.5112,Use continuous equipment which retains process heating conveyors within the heated chamber,2.5,Industrial Design,Systems - Thermal
+2.5113,Use direct flame impingement or infrared processing for chamber type heating,2.5,Industrial Design,Systems - Thermal
+2.5114,Use shaft type furnaces for preheating incoming material,2.5,Industrial Design,Systems - Thermal
+2.5115,Reposition oven walls to reduce heated space,2.5,Industrial Design,Systems - Thermal
+2.5117,Convert to indirect temperature control system,2.5,Industrial Design,Systems - Thermal
+2.5121,Redesign flow to minimize mass transfer length,2.5,Industrial Design,Systems - Mechanical
+2.5122,"Replace high resistance ducts, pipes, and fittings",2.5,Industrial Design,Systems - Mechanical
+2.5123,Reduce fluid flow rates,2.5,Industrial Design,Systems - Mechanical
+2.5124,Use gravity feeds wherever possible,2.5,Industrial Design,Systems - Mechanical
+2.5125,Size air handling grills/ducts coils to minimize air resistance,2.5,Industrial Design,Systems - Mechanical
+2.5191,Modify dye beck,2.5,Industrial Design,Systems - Misc
+2.5192,Modify textile dryers,2.5,Industrial Design,Systems - Misc
+2.5193,Convert from batch to continuous operation,2.5,Industrial Design,Systems - Misc
+2.5194,Redesign process,2.5,Industrial Design,Systems - Misc
+2.5195,Change product design to reduce energy requirements,2.5,Industrial Design,Systems - Misc
+2.5196,Use small number of high output units instead of many small inefficient units,2.5,Industrial Design,Systems - Misc
+2.6121,Reduce hot water temperature to the minimum required,2.6,Operations,Maintenance
+2.6122,Adjust vents to minimize energy use,2.6,Operations,Maintenance
+2.6123,Remove unneeded service lines to eliminate potential leaks,2.6,Operations,Maintenance
+2.6124,Establish equipment maintenance schedule,2.6,Operations,Maintenance
+2.6125,Keep equipment clean,2.6,Operations,Maintenance
+2.6126,Keep solid fuels/raw materials dry,2.6,Operations,Maintenance
+2.6127,Maintain air filters by cleaning or replacement,2.6,Operations,Maintenance
+2.6211,Conserve energy by efficient use of vending machines,2.6,Operations,Equipment Use Reduction
+2.6212,"Turn off equipment during breaks, reduce operating time",2.6,Operations,Equipment Use Reduction
+2.6213,Turn off steam/hot water lines leading to space heating units,2.6,Operations,Equipment Use Reduction
+2.6214,Shut off pilots in standby equipment,2.6,Operations,Equipment Use Reduction
+2.6215,Shut off air conditioning in winter heating season,2.6,Operations,Equipment Use Reduction
+2.6218,Turn off equipment when not in use,2.6,Operations,Equipment Use Reduction
+2.6221,Use most efficient equipment at its maximum capacity,2.6,Operations,Equipment Scheduling
+2.6222,Use drying oven (batch type) on alternate days or optimum schedule to run with full loads,2.6,Operations,Equipment Scheduling
+2.6223,Schedule use of elevators to conserve energy,2.6,Operations,Equipment Scheduling
+2.6224,Schedule baking times of small and large components,2.6,Operations,Equipment Scheduling
+2.6225,Eliminate third shift,2.6,Operations,Equipment Scheduling
+2.6226,Optimize filtration cleaning/replacement to minimize air resistance,2.6,Operations,Equipment Scheduling
+2.6231,Utilize controls to operate equipment only when needed,2.6,Operations,Equipment Automation
+2.6232,Install set-back timers,2.6,Operations,Equipment Automation
+2.6241,Reduce temperature of process equipment when on standby,2.6,Operations,Load Reduction
+2.6242,Minimize operation of equipment maintained in standby condition,2.6,Operations,Load Reduction
+2.7111,Reduce illumination to minimum necessary levels,2.7,Building & Grounds,Lighting - Level
+2.7121,Utilize daylight whenever possible in lieu of artificial light,2.7,Building & Grounds,Lighting - Operation
+2.7122,Disconnect ballasts,2.7,Building & Grounds,Lighting - Operation
+2.7123,Keep lamps and reflectors clean,2.7,Building & Grounds,Lighting - Operation
+2.7124,Make a practice of turning off lights when not needed,2.7,Building & Grounds,Lighting - Operation
+2.7131,Add area lighting switches,2.7,Building & Grounds,Lighting - Controls
+2.7132,Install timers on light switches in little used areas,2.7,Building & Grounds,Lighting - Controls
+2.7133,Use separate switches on perimeter lighting which may be turned off when natural light is available,2.7,Building & Grounds,Lighting - Controls
+2.7134,Use photocell controls,2.7,Building & Grounds,Lighting - Controls
+2.7135,Install occupancy sensors,2.7,Building & Grounds,Lighting - Controls
+2.7141,Lower light fixtures in high ceiling areas,2.7,Building & Grounds,Lighting - Hardware
+2.7142,Utilize higher efficiency lamps and/or ballasts,2.7,Building & Grounds,Lighting - Hardware
+2.7144,Install spectral reflectors/delamp,2.7,Building & Grounds,Lighting - Hardware
+2.7145,Install skylights,2.7,Building & Grounds,Lighting - Hardware
+2.7211,Clean and maintain refrigerant condensers and towers,2.7,Building & Grounds,Space Conditioning - Maintenance
+2.7212,Install or upgrade insulation on HVAC distribution systems,2.7,Building & Grounds,Space Conditioning - Maintenance
+2.7221,Lower temperature during the winter season and vice-versa,2.7,Building & Grounds,Space Conditioning - Operation
+2.7224,Reduce space conditioning during non-working hours,2.7,Building & Grounds,Space Conditioning - Operation
+2.7225,Close outdoor air dampers during warm-up/cool-down periods,2.7,Building & Grounds,Space Conditioning - Operation
+2.7226,Use computer programs to optimize HVAC performance,2.7,Building & Grounds,Space Conditioning - Operation
+2.7227,Use water on air conditioning exchanger,2.7,Building & Grounds,Space Conditioning - Operation
+2.7228,"Avoid introducing hot, humid, or dirty air into HVAC system",2.7,Building & Grounds,Space Conditioning - Operation
+2.7229,Air condition only space necessary,2.7,Building & Grounds,Space Conditioning - Operation
+2.7231,Use radiant heater for spot heating,2.7,Building & Grounds,Space Conditioning - Hardware Heating/Cooling
+2.7232,Replace existing HVAC unit with high efficiency model,2.7,Building & Grounds,Space Conditioning - Hardware Heating/Cooling
+2.7233,Use properly designed and sized HVAC equipment,2.7,Building & Grounds,Space Conditioning - Hardware Heating/Cooling
+2.7234,Use heat pump for space conditioning,2.7,Building & Grounds,Space Conditioning - Hardware Heating/Cooling
+2.7235,Install fossil fuel make-up air unit,2.7,Building & Grounds,Space Conditioning - Hardware Heating/Cooling
+2.7241,Install outside air damper/economizer on HVAC unit,2.7,Building & Grounds,Space Conditioning - Air Circulation
+2.7242,Change zone reheat coils to variable air volume boxes,2.7,Building & Grounds,Space Conditioning - Air Circulation
+2.7243,Improve air circulation with destratification fans/other methods,2.7,Building & Grounds,Space Conditioning - Air Circulation
+2.7244,Revise smoke cleanup from operations,2.7,Building & Grounds,Space Conditioning - Air Circulation
+2.7245,Use direct air supply to exhaust hoods,2.7,Building & Grounds,Space Conditioning - Air Circulation
+2.7251,Reduce air conditioning load by evaporating water from roof,2.7,Building & Grounds,Space Conditioning - Evaporation
+2.7252,Utilize an evaporative air pre-cooler or other heat exchanger in AC system,2.7,Building & Grounds,Space Conditioning - Evaporation
+2.7261,Install timers and/or thermostats,2.7,Building & Grounds,Space Conditioning - Controls
+2.7262,Separate controls of air handlers from AC/heating systems,2.7,Building & Grounds,Space Conditioning - Controls
+2.7263,Lower compressor pressure through A/C system modification,2.7,Building & Grounds,Space Conditioning - Controls
+2.7264,Interlock heating and air conditioning systems to prevent simultaneous operation,2.7,Building & Grounds,Space Conditioning - Controls
+2.7271,Replace electric reheat with heat pipes,2.7,Building & Grounds,Space Conditioning - Humidity
+2.7272,Install heat pipes/raise cooling setpoint,2.7,Building & Grounds,Space Conditioning - Humidity
+2.7273,Install desiccant humidity control system,2.7,Building & Grounds,Space Conditioning - Humidity
+2.7291,Reschedule and rearrange multiple-source heating systems,2.7,Building & Grounds,Space Conditioning - Misc
+2.7292,Lower ceiling to reduce conditioned space,2.7,Building & Grounds,Space Conditioning - Misc
+2.7293,Modify sprinkler system to reduce heating requirements,2.7,Building & Grounds,Space Conditioning - Misc
+2.7311,Ventilation system to shut off when room is not in use,2.7,Building & Grounds,Ventilation
+2.7312,Minimize use of outside make-up air for ventilation except when used for economizer cycle,2.7,Building & Grounds,Ventilation
+2.7313,"Recycle air for heating, ventilation and air conditioning",2.7,Building & Grounds,Ventilation
+2.7314,Reduce ventilation air,2.7,Building & Grounds,Ventilation
+2.7316,Centralize control of exhaust fans to ensure their shutdown,2.7,Building & Grounds,Ventilation
+2.7421,Reduce glazed areas in buildings,2.7,Building & Grounds,Building Envelope - Solar Loading
+2.7422,Plant trees or shrubs near windows to shield from sunlight,2.7,Building & Grounds,Building Envelope - Solar Loading
+2.7423,Reduce heat gain by window tinting,2.7,Building & Grounds,Building Envelope - Solar Loading
+2.7424,Shade windows from summer sun,2.7,Building & Grounds,Building Envelope - Solar Loading
+2.7425,Clean or color roof to reduce solar load,2.7,Building & Grounds,Building Envelope - Solar Loading
+2.7441,Replace broken windows and/or window sash,2.7,Building & Grounds,Building Envelope - Infiltration
+2.7442,Keep doors and windows shut when not in use,2.7,Building & Grounds,Building Envelope - Infiltration
+2.7444,Close holes and openings in building such as broken windows,2.7,Building & Grounds,Building Envelope - Infiltration
+2.7446,Utilize sensors controlling roof and wall openings,2.7,Building & Grounds,Building Envelope - Infiltration
+2.7447,Install vinyl strip/high speed/air curtain doors,2.7,Building & Grounds,Building Envelope - Infiltration
+2.7491,"Insulate glazing, walls, ceilings, and roofs",2.7,Building & Grounds,Building Envelope - Misc
+2.7492,Use proper thickness of insulation on building envelope,2.7,Building & Grounds,Building Envelope - Misc
+2.7493,Use double or triple glazed windows to maintain higher relative humidity and reduce heat losses,2.7,Building & Grounds,Building Envelope - Misc
+2.7494,Install storm windows and doors,2.7,Building & Grounds,Building Envelope - Misc
+2.7495,Install replacement doors,2.7,Building & Grounds,Building Envelope - Misc
+2.7496,Install partitions to reduce size of conditioned space,2.7,Building & Grounds,Building Envelope - Misc
+2.8112,Combine utility meters,2.8,Ancillary Costs,Administrative - Utility Costs
+2.8113,Purchase gas directly from a contract gas supplier,2.8,Ancillary Costs,Administrative - Utility Costs
+2.8114,Change rate schedules or other changes in utility service,2.8,Ancillary Costs,Administrative - Utility Costs
+2.8115,Base utility charges on usage rather than area occupied,2.8,Ancillary Costs,Administrative - Utility Costs
+2.8117,Install sub-metering equipment,2.8,Ancillary Costs,Administrative - Utility Costs
+2.8118,Check for accuracy of utility/power meters,2.8,Ancillary Costs,Administrative - Utility Costs
+2.8121,Apply for tax-free status for energy purchases,2.8,Ancillary Costs,Administrative - Fiscal
+2.8122,Use utility controlled power management,2.8,Ancillary Costs,Administrative - Fiscal
+2.8123,Pay utility bills on time,2.8,Ancillary Costs,Administrative - Fiscal
+2.8124,Hire energy manager,2.8,Ancillary Costs,Administrative - Fiscal
+2.8211,Consolidate freight shipments and/or deliveries,2.8,Ancillary Costs,Shipping/Transportation
+2.8212,Reduce delivery schedules,2.8,Ancillary Costs,Shipping/Transportation
+2.8221,Consider intermediate or economy size autos/trucks,2.8,Ancillary Costs,Vehicles
+2.8222,Size trucks to job,2.8,Ancillary Costs,Vehicles
+2.8223,Add air shields to trucks to increase fuel mileage,2.8,Ancillary Costs,Vehicles
+2.8226,Increase efficiency of trucks,2.8,Ancillary Costs,Vehicles
+2.8227,Adjust/maintain fork lift trucks for most efficient operation,2.8,Ancillary Costs,Vehicles
+2.9111,Use solar heat to heat make-up air,2.9,Alternative Energy,Solar
+2.9112,Use solar heat to heat water,2.9,Alternative Energy,Solar
+2.9113,Use solar heat for heat,2.9,Alternative Energy,Solar
+2.9114,Use solar heat to make electricity,2.9,Alternative Energy,Solar
+2.9121,Install wind powered electric generator,2.9,Alternative Energy,Wind Power
+2.9131,Install fuel cell to utilize waste hydrogen,2.9,Alternative Energy,Hydrogen
+2.9141,Install anaerobic digester,2.9,Alternative Energy,Biofuels
+3.1111,Cover ink containers when not in use,3.1,WM - Operations,Procedures - Process Specific
+3.1114,Reuse high ferrous metal dust as raw material,3.1,WM - Operations,Procedures - Process Specific
+3.1121,Use more efficient adhesive applicators,3.1,WM - Operations,Procedures - Material Application
+3.1131,Use mechanical stripping methods,3.1,WM - Operations,Procedures - Stripping
+3.1152,Use high quality scrap (low sulfur) to reduce hazardous sludge generation,3.1,WM - Operations,Procedures - Desulfurization
+3.1154,Use an alternative desulfurizing agent to eliminate hazardous slag formation,3.1,WM - Operations,Procedures - Desulfurization
+3.1161,Eliminate/reduce an operation,3.1,WM - Operations,Procedures - Reduction
+3.1162,Use less wasteful packaging,3.1,WM - Operations,Procedures - Reduction
+3.1163,Use plastic pallets instead of wood,3.1,WM - Operations,Procedures - Reduction
+3.1171,Change product specs,3.1,WM - Operations,Procedures - Product Specs
+3.1172,Revise raw material specs,3.1,WM - Operations,Procedures - Product Specs
+3.1175,Use a different or recycle raw material,3.1,WM - Operations,Procedures - Product Specs
+3.1181,Eliminate a by-product,3.1,WM - Operations,Procedures - By-product Use
+3.1182,Make a new by-product,3.1,WM - Operations,Procedures - By-product Use
+3.1191,Change procedures/equipment/operating conditions,3.1,WM - Operations,Procedures - Misc
+3.1192,Reduce scrap production,3.1,WM - Operations,Procedures - Misc
+3.1193,Convert from batch operation to continuous processing,3.1,WM - Operations,Procedures - Misc
+3.1194,Use automatic flow control,3.1,WM - Operations,Procedures - Misc
+3.1221,Use reactive rinsing,3.1,WM - Operations,Waste Stream - Rinsing
+3.1222,Reduce water use with countercurrent rinsing,3.1,WM - Operations,Waste Stream - Rinsing
+3.1223,Use fog nozzles/spray rinsing instead of immersion rinsing,3.1,WM - Operations,Waste Stream - Rinsing
+3.1227,Use countercurrent rinsing to reduce rinse water volume (gravure),3.1,WM - Operations,Waste Stream - Rinsing
+3.1241,Slow insertion/withdrawal of parts from degreasing tank,3.1,WM - Operations,Waste Stream - Dragout
+3.1242,Allow drainage before withdrawing object,3.1,WM - Operations,Waste Stream - Dragout
+3.1244,Reduce solution drag-out to prevent solution loss,3.1,WM - Operations,Waste Stream - Dragout
+3.1291,Eliminate practice of mixing waste streams,3.1,WM - Operations,Waste Stream - Misc
+3.1293,Separate treatments for each type of solution and recycle,3.1,WM - Operations,Waste Stream - Misc
+3.1294,Segregate spent solvents and reuse in subsequent washings,3.1,WM - Operations,Waste Stream - Misc
+3.2111,Install redundant equipment to avoid losses caused by equipment failure,3.2,WM - Equipment,Fault Tolerance
+3.2121,Convert to electrostatic powder coating,3.2,WM - Equipment,Painting Operations
+3.2123,Convert to high volume low pressure (HVLP) paint guns,3.2,WM - Equipment,Painting Operations
+3.2124,Convert to air assisted/airless paint guns,3.2,WM - Equipment,Painting Operations
+3.2135,Extend solution life with filtering or carbonate freezing,3.2,WM - Equipment,Process Specific Upgrades
+3.2136,Use wash-less processing equipment,3.2,WM - Equipment,Process Specific Upgrades
+3.2141,Use cylindrical tanks with height to diameter ratios close to one,3.2,WM - Equipment,Tank Design
+3.2142,Use tanks with a conical bottom outlet section,3.2,WM - Equipment,Tank Design
+3.2161,Closely monitor chemical additions to increase bath life,3.2,WM - Equipment,System Monitoring
+3.2171,Use an automatic plate processor,3.2,WM - Equipment,Automation
+3.2172,Use automatic cleaning equipment,3.2,WM - Equipment,Automation
+3.2173,Convert to robotic painting,3.2,WM - Equipment,Automation
+3.2176,Increase use of automation,3.2,WM - Equipment,Automation
+3.3111,Adjust pH for neutralization,3.3,WM - Post Generation Treatment,Neutralization
+3.3112,Utilize oxidation/reduction for neutralization,3.3,WM - Post Generation Treatment,Neutralization
+3.3113,Use other methods for neutralization,3.3,WM - Post Generation Treatment,Neutralization
+3.3121,"Use screening, magnetic separation to remove contaminants",3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3122,"Use filtration, centrifuging to remove contaminants",3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3123,"Use decanting, flotation to remove contaminants",3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3125,"Use distillation, evaporation to remove contaminants",3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3126,"Use absorption, extraction to remove contaminants",3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3127,"Use adsorption, ion exchange to remove contaminants",3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3128,Utilize other methods to remove contaminants,3.3,WM - Post Generation Treatment,Removal of Contaminants
+3.3131,Use evaporation to concentrate material,3.3,WM - Post Generation Treatment,Material Concentration
+3.3132,Use reverse osmosis to concentrate material,3.3,WM - Post Generation Treatment,Material Concentration
+3.3133,Use other waste concentration methods,3.3,WM - Post Generation Treatment,Material Concentration
+3.4111,Use closed cycle process to minimize waste water production,3.4,WM - Water Use,Close Cycle Water
+3.4112,Recovery metals from rinse water and reuse rinse water,3.4,WM - Water Use,Close Cycle Water
+3.4113,Treat and reuse rinse waters,3.4,WM - Water Use,Close Cycle Water
+3.4114,Replace city water with recycled water via cooling tower,3.4,WM - Water Use,Close Cycle Water
+3.4115,Recover and reuse cooling water,3.4,WM - Water Use,Close Cycle Water
+3.4116,Meter recycled water (to reduce sewer charges),3.4,WM - Water Use,Close Cycle Water
+3.4131,Minimize contamination of water before treatment,3.4,WM - Water Use,Water Quality
+3.4132,Use deionized water in upstream rinse tanks,3.4,WM - Water Use,Water Quality
+3.4133,Clean fouling from water lines regularly,3.4,WM - Water Use,Water Quality
+3.4141,Replace the chlorination stage with an oxygen or ozone stage,3.4,WM - Water Use,Water Treatment
+3.4144,Perform high consistency gas phase chlorination,3.4,WM - Water Use,Water Treatment
+3.4145,Use magnetic technology to treat water,3.4,WM - Water Use,Water Treatment
+3.4146,Change method of deionized water production,3.4,WM - Water Use,Water Treatment
+3.4151,Minimize water usage,3.4,WM - Water Use,Reduction
+3.4152,Carefully control water level in mass finishing equipment,3.4,WM - Water Use,Reduction
+3.4153,Use countercurrent rinsing to reduce waste water,3.4,WM - Water Use,Reduction
+3.4154,Eliminate leaks in water lines and valves,3.4,WM - Water Use,Reduction
+3.4155,Sub-meter/quantify water use,3.4,WM - Water Use,Reduction
+3.4156,Use flow control valves on equipment to optimize water use,3.4,WM - Water Use,Reduction
+3.4157,Replace water cooling on processes with air cooling,3.4,WM - Water Use,Reduction
+3.4158,Use minimum cooling water to bearings,3.4,WM - Water Use,Reduction
+3.4159,Replace treated water with well/surface water,3.4,WM - Water Use,Reduction
+3.5111,Filter and reuse hydraulic oil,3.5,WM - Recycling,Liquid Waste - Oil
+3.5112,Reprocess spent oils on site for re-use,3.5,WM - Recycling,Liquid Waste - Oil
+3.5113,Sell oil to recycler,3.5,WM - Recycling,Liquid Waste - Oil
+3.5121,Recycle waste ink and cleanup solvent,3.5,WM - Recycling,Liquid Waste - Ink
+3.5131,Recycle white water,3.5,WM - Recycling,Liquid Waste - White Water
+3.5132,Reuse rich white water in other applications,3.5,WM - Recycling,Liquid Waste - White Water
+3.5142,Treat and reuse equipment cleaning solutions,3.5,WM - Recycling,Liquid Waste - Misc
+3.5143,Return spent solutions to the manufacturer,3.5,WM - Recycling,Liquid Waste - Misc
+3.5144,Recycle spent tanning solution,3.5,WM - Recycling,Liquid Waste - Misc
+3.5145,Recover and reuse spent acid baths,3.5,WM - Recycling,Liquid Waste - Misc
+3.5146,Utilize a central coolant system for cleaning and reuse of metal working fluid,3.5,WM - Recycling,Liquid Waste - Misc
+3.5211,Reuse scrap glass as feed stock,3.5,WM - Recycling,Solid Waste - General
+3.5212,"Regrind, reuse, or sell scrap plastic parts",3.5,WM - Recycling,Solid Waste - General
+3.5213,Reuse scrap printed paper for make-ready,3.5,WM - Recycling,Solid Waste - General
+3.5215,Avoid contamination of end pieces and reuse as feed stock,3.5,WM - Recycling,Solid Waste - General
+3.5216,Recycle non-ferrous dust,3.5,WM - Recycling,Solid Waste - General
+3.5217,Reuse/recycle/sell paper products,3.5,WM - Recycling,Solid Waste - General
+3.5218,Reuse/recycle/sell rubber products,3.5,WM - Recycling,Solid Waste - General
+3.5221,Recycle casting sand,3.5,WM - Recycling,Solid Waste - Sand
+3.5222,"Use sand for other purposes (e.g., construction fill)",3.5,WM - Recycling,Solid Waste - Sand
+3.5241,Sell used plates to an aluminum recycler,3.5,WM - Recycling,Solid Waste - Metals
+3.5242,Recover metals from spent solutions and recycle,3.5,WM - Recycling,Solid Waste - Metals
+3.5244,Recover metals from casting sand,3.5,WM - Recycling,Solid Waste - Metals
+3.5248,Separate and recycle scrap metal to foundry or for sale,3.5,WM - Recycling,Solid Waste - Metals
+3.5311,Recover and reuse waste material,3.5,WM - Recycling,Other Materials
+3.5313,Increase amount of waste recovered for resale,3.5,WM - Recycling,Other Materials
+3.5314,Use in-process recycling whenever possible,3.5,WM - Recycling,Other Materials
+3.5315,Lease/purchase baler; sell cardboard to recycler,3.5,WM - Recycling,Other Materials
+3.5316,Contract a wood pallet recycling company,3.5,WM - Recycling,Other Materials
+3.5317,Sell/offer by-product as animal feed,3.5,WM - Recycling,Other Materials
+3.5318,Recycle fluorescent lamps,3.5,WM - Recycling,Other Materials
+3.6111,Use alternative flocculent to minimize sludge volume,3.6,WM - Waste Disposal,Sludge Maintenance
+3.6112,Use filter and drying oven to reduce sludge volume,3.6,WM - Waste Disposal,Sludge Maintenance
+3.6113,Remove sludge from tanks on a regular basis,3.6,WM - Waste Disposal,Sludge Maintenance
+3.6114,Use precipitating agents that produce the least quantity of waste,3.6,WM - Waste Disposal,Sludge Maintenance
+3.6121,Burn waste paper for heat,3.6,WM - Waste Disposal,Combustion of Waste
+3.6122,Install solid waste incinerator for heat,3.6,WM - Waste Disposal,Combustion of Waste
+3.6123,Burn wood by-products for heat,3.6,WM - Waste Disposal,Combustion of Waste
+3.6124,Burn waste oil for heat,3.6,WM - Waste Disposal,Combustion of Waste
+3.6125,Sell combustible waste,3.6,WM - Waste Disposal,Combustion of Waste
+3.6126,Direct waste gasses to boiler combustion air,3.6,WM - Waste Disposal,Combustion of Waste
+3.6192,Use a less expensive method of waste removal,3.6,WM - Waste Disposal,Misc
+3.6193,"Install equipment (e.g., compactor) to reduce disposal costs",3.6,WM - Waste Disposal,Misc
+3.6194,Ship hydraulic oil to secondary fuel program,3.6,WM - Waste Disposal,Misc
+3.7112,"Use squeegees, mops, and vacuums for floor cleaning",3.7,WM - Maintenance,Mechanical Cleaning
+3.7115,Clean lines with pigs instead of solvents/solutions,3.7,WM - Maintenance,Mechanical Cleaning
+3.7121,Improve handling practices,3.7,WM - Maintenance,Reduction of Cleaning
+3.7122,Maximize production runs to reduce cleaning,3.7,WM - Maintenance,Reduction of Cleaning
+3.7123,Use continuous processing,3.7,WM - Maintenance,Reduction of Cleaning
+3.7124,Install dedicated mixing equipment to optimize reuse,3.7,WM - Maintenance,Reduction of Cleaning
+3.7131,Use a rag recycle service,3.7,WM - Maintenance,Rag Use
+3.7132,Reuse rags until completely soiled,3.7,WM - Maintenance,Rag Use
+3.7134,Wash and reuse rags on-site,3.7,WM - Maintenance,Rag Use
+3.7135,Minimize use of rags through worker training,3.7,WM - Maintenance,Rag Use
+3.7137,Replace cloth rags with paper towels,3.7,WM - Maintenance,Rag Use
+3.7141,Improve cleaning efficiency by maintaining cleaning system,3.7,WM - Maintenance,Preventive Maintenance
+3.7142,Use clean in place (CIP) systems,3.7,WM - Maintenance,Preventive Maintenance
+3.7143,Clean equipment immediately after use,3.7,WM - Maintenance,Preventive Maintenance
+3.7191,Use water based spray abrasives instead of bar abrasives,3.7,WM - Maintenance,Misc
+3.7193,Use high pressure wash systems,3.7,WM - Maintenance,Misc
+3.7195,Use teflon lined tanks,3.7,WM - Maintenance,Misc
+3.7196,Use reusable filters,3.7,WM - Maintenance,Misc
+3.7197,Use ultrasonic cleaning,3.7,WM - Maintenance,Misc
+3.7198,Reduce/eliminate use of disposable product,3.7,WM - Maintenance,Misc
+3.7211,Modify material application methods,3.7,WM - Maintenance,Spillage - Operations
+3.7212,Improved material handling (mixing and transfer),3.7,WM - Maintenance,Spillage - Operations
+3.7214,Reduce or eliminate waste,3.7,WM - Maintenance,Spillage - Operations
+3.7221,Improve process control to prevent spills of material,3.7,WM - Maintenance,Spillage - Hardware
+3.7222,Minimize overflows by installing level controls,3.7,WM - Maintenance,Spillage - Hardware
+3.7223,Install shrouding on machines to prevent splashing,3.7,WM - Maintenance,Spillage - Hardware
+3.7224,Use pumps and piping to decrease spillage during material transfer,3.7,WM - Maintenance,Spillage - Hardware
+3.7311,Maintain machines to reduce leaks,3.7,WM - Maintenance,Leak Reduction
+3.7312,Implement a regular maintenance program to reduce emissions from leaky valves and pipe fittings,3.7,WM - Maintenance,Leak Reduction
+3.7313,Eliminate oxygen loss,3.7,WM - Maintenance,Leak Reduction
+3.7391,"Implement a maintenance program to keep racks and tanks free of rust, cracks, or corrosion",3.7,WM - Maintenance,Other - Misc
+3.7392,Apply a protective coating to racks and tanks,3.7,WM - Maintenance,Other - Misc
+3.7393,Implement a machine and coolant sump cleaning program,3.7,WM - Maintenance,Other - Misc
+3.8113,Prevent excessive solvent usage (operator training),3.8,WM - Raw Materials,Solvents - Use Reduction
+3.8121,Cover containers to minimize evaporative losses,3.8,WM - Raw Materials,Solvents - Emission Reduction
+3.8122,Use tight-fitting lids on material containers to reduce VOC emissions,3.8,WM - Raw Materials,Solvents - Emission Reduction
+3.8124,Install floating covers on tanks of volatile materials to reduce evaporation,3.8,WM - Raw Materials,Solvents - Emission Reduction
+3.8125,Remove rollers from machines and clean in a closed solvent cleaner,3.8,WM - Raw Materials,Solvents - Emission Reduction
+3.8126,Use flue gas recuperation to reduce VOC,3.8,WM - Raw Materials,Solvents - Emission Reduction
+3.8131,Use water-based adhesives,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8132,Use less toxic and volatile solvent substitutes,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8133,Convert to aqueous cleaning,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8134,Use water-based cutting fluids to eliminate need for solvent cleaning,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8135,Use low VOC or water based paint,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8136,Switch to a solvent that can be cleaned and reused,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8137,Use soy or water-based inks,3.8,WM - Raw Materials,Solvents - Material Replacement
+3.8141,Regenerate cleaning solvent on-site and reuse,3.8,WM - Raw Materials,Solvents - Solvent Recovery
+3.8142,Distill contaminated solvents for reuse,3.8,WM - Raw Materials,Solvents - Solvent Recovery
+3.8143,Recycle cleaning solvent and reuse,3.8,WM - Raw Materials,Solvents - Solvent Recovery
+3.8211,Convert to aqueous cleaning system,3.8,WM - Raw Materials,Other Solutions - Water-Based
+3.8214,Use water-based developers and finishers,3.8,WM - Raw Materials,Other Solutions - Water-Based
+3.8221,"Use alternatives for acids/alkaline (water, steam, abrasive)",3.8,WM - Raw Materials,Other Solutions - Substitutes
+3.8224,Convert to less toxic hydrocarbon cleaners,3.8,WM - Raw Materials,Other Solutions - Substitutes
+3.8225,Replace hexavalent chromium solutions with trivalent solutions,3.8,WM - Raw Materials,Other Solutions - Substitutes
+3.8228,Replace heavy metal reagents with non-hazardous reagents,3.8,WM - Raw Materials,Other Solutions - Substitutes
+3.8312,Use building materials which require less energy to produce,3.8,WM - Raw Materials,Solids
+3.8314,Purchase high materials in returnable bulk containers,3.8,WM - Raw Materials,Solids
+4.111,Add equipment/operators to reduce production bottleneck,4.1,Productivity - Manufacturing,Bottleneck Reduction
+4.112,Replace old machine with new automatic multi-station tool,4.1,Productivity - Manufacturing,Bottleneck Reduction
+4.113,Install refrigeration system to cool product,4.1,Productivity - Manufacturing,Bottleneck Reduction
+4.114,Add/modify equipment to improve drying process,4.1,Productivity - Manufacturing,Bottleneck Reduction
+4.121,Maintain clean conditions before painting,4.1,Productivity - Manufacturing,Defect Reduction
+4.122,Develop standard procedures to improve internal yields,4.1,Productivity - Manufacturing,Defect Reduction
+4.123,Reduce defects by reducing product tipping,4.1,Productivity - Manufacturing,Defect Reduction
+4.124,Install continuous lubrication equipment,4.1,Productivity - Manufacturing,Defect Reduction
+4.126,Install sensors to detect defects,4.1,Productivity - Manufacturing,Defect Reduction
+4.131,Modify process to reduce material use/cost,4.1,Productivity - Manufacturing,Material Reduction
+4.132,Purchase new equipment to reduce material use/cost,4.1,Productivity - Manufacturing,Material Reduction
+4.211,Consider use/purchase of bulk materials where possible,4.2,Productivity - Purchasing,Raw Materials
+4.212,Adopt in-house material generation,4.2,Productivity - Purchasing,Raw Materials
+4.213,Purchase material from supplier in customized packaging,4.2,Productivity - Purchasing,Raw Materials
+4.214,Purchase appropriately sized material,4.2,Productivity - Purchasing,Raw Materials
+4.221,Use only amount of packaging material necessary,4.2,Productivity - Purchasing,Ancillary Materials
+4.222,Purchase reconditioned material instead of new,4.2,Productivity - Purchasing,Ancillary Materials
+4.231,Purchase equipment instead of leasing,4.2,Productivity - Purchasing,Capital
+4.232,Lease equipment instead of purchasing,4.2,Productivity - Purchasing,Capital
+4.311,Schedule deliveries according to demand,4.3,Productivity - Inventory,Just In Time
+4.321,Optimize production lot sizes and inventories,4.3,Productivity - Inventory,Other Inventory Controls
+4.322,Eliminate old stock and/or modify inventory control,4.3,Productivity - Inventory,Other Inventory Controls
+4.323,Optimize lot sizes to reduce inventory carrying costs,4.3,Productivity - Inventory,Other Inventory Controls
+4.421,Modify current incentive program,4.4,Productivity - Labor,Practices/Procedures
+4.422,Utilize outside contracting,4.4,Productivity - Labor,Practices/Procedures
+4.423,Move product using mechanical means,4.4,Productivity - Labor,Practices/Procedures
+4.424,Improve space comfort conditioning,4.4,Productivity - Labor,Practices/Procedures
+4.425,Eliminate/reduce redundant inspections,4.4,Productivity - Labor,Practices/Procedures
+4.426,Modify workload,4.4,Productivity - Labor,Practices/Procedures
+4.431,Train operators for maximum operating efficiency,4.4,Productivity - Labor,Training
+4.432,Cross-train personnel to avoid lost time,4.4,Productivity - Labor,Training
+4.441,Install automatic packing equipment,4.4,Productivity - Labor,Automation
+4.442,Install magazines for temporary storage,4.4,Productivity - Labor,Automation
+4.443,Install automatic boiler fuel feed system,4.4,Productivity - Labor,Automation
+4.444,Install system to collect scrap,4.4,Productivity - Labor,Automation
+4.445,Install equipment to move product,4.4,Productivity - Labor,Automation
+4.446,Automate finishing process,4.4,Productivity - Labor,Automation
+4.447,Automate payroll system,4.4,Productivity - Labor,Automation
+4.448,Install automatic part storage/retrieval system,4.4,Productivity - Labor,Automation
+4.451,Add additional production shift,4.4,Productivity - Labor,Scheduling
+4.452,Eliminate shift,4.4,Productivity - Labor,Scheduling
+4.453,Reschedule breaks to allow for continuous production,4.4,Productivity - Labor,Scheduling
+4.454,Modify startup/shutdown times,4.4,Productivity - Labor,Scheduling
+4.463,Modify facility to avoid excess maintenance costs,4.4,Productivity - Labor,Maintenance
+4.511,Expand operations into unused space,4.5,Productivity - Space,Floor Layout
+4.512,Condense operation into one building,4.5,Productivity - Space,Floor Layout
+4.513,Rearrange equipment layout to reduce labor costs,4.5,Productivity - Space,Floor Layout
+4.514,Rearrange equipment layout to reduce handling costs,4.5,Productivity - Space,Floor Layout
+4.515,Install shelves/racks to utilize unused space,4.5,Productivity - Space,Floor Layout
+4.521,Clear and rent existing space,4.5,Productivity - Space,Rental Space
+4.522,Modify storage space to avoid rental of a warehouse,4.5,Productivity - Space,Rental Space
+4.611,Begin a practice of predictive/preventative maintenance,4.6,Productivity - Downtime,Maintenance
+4.612,Contract out maintenance,4.6,Productivity - Downtime,Maintenance
+4.621,Use fixtures to reduce machine changeout times,4.6,Productivity - Downtime,Quick Change
+4.622,Install rotating carousels to reduce set-up times,4.6,Productivity - Downtime,Quick Change
+4.623,Employ modular jigs to reduce process set-up time,4.6,Productivity - Downtime,Quick Change
+4.624,Hire additional personnel to reduce change-out time,4.6,Productivity - Downtime,Quick Change
+4.625,Develop standard operating procedures,4.6,Productivity - Downtime,Quick Change
+4.631,Install an uninterruptible power supply,4.6,Productivity - Downtime,Power Conditioning
+4.632,Change operating conditions,4.6,Productivity - Downtime,Power Conditioning
+4.641,Eliminate shutdowns of controls due to overheating,4.6,Productivity - Downtime,Alarms
+4.642,Install sensors to detect and avoid jams,4.6,Productivity - Downtime,Alarms
+4.651,Install backup equipment,4.6,Productivity - Downtime,Other Equipment
+4.652,Replace existing equipment with more suitable substitutes,4.6,Productivity - Downtime,Other Equipment
+4.653,Maintain/enlarge a stock of spare parts,4.6,Productivity - Downtime,Other Equipment
+4.661,Level Zero - Install control systems for existing equipment,4.6,Productivity - Downtime,Smart Mfg / IIoT
+4.662,Level One - Add communication using IIoT devices to existing control system,4.6,Productivity - Downtime,Smart Mfg / IIoT
+4.663,Level Two - Install control system using IIoT devices with communication to cloud,4.6,Productivity - Downtime,Smart Mfg / IIoT
+4.664,Level Three - Install/modify control system with non-local external information for better decision making,4.6,Productivity - Downtime,Smart Mfg / IIoT
+4.711,Initiate a total quality management program,4.7,Productivity - Management,TQM
+4.712,Utilize job costing software,4.7,Productivity - Management,TQM
+4.721,Initiate a program to acquire ISO certification,4.7,Productivity - Management,Certifications
+4.731,Advertise product or service,4.7,Productivity - Management,Marketing
+4.811,Demolish old building to reduce tax and insurance bills,4.8,Productivity - Admin,Taxes
+4.812,Apply for investment incentives,4.8,Productivity - Admin,Taxes
+4.821,Pay bills on time to avoid late fees,4.8,Productivity - Admin,Fees

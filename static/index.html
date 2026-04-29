@@ -1,0 +1,1005 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAC Pre-Audit Assessment Tool</title>
+  <style>
+    /* â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue:    #1a6fc4;
+      --blue-dk: #135199;
+      --green:   #1a8a4a;
+      --amber:   #c07800;
+      --red:     #c0392b;
+      --bg:      #f4f6f9;
+      --card:    #ffffff;
+      --border:  #d5dbe6;
+      --text:    #1d2433;
+      --sub:     #5a657a;
+      --radius:  10px;
+      --shadow:  0 2px 8px rgba(0,0,0,0.08);
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    /* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    header {
+      background: linear-gradient(135deg, #0f3460 0%, #1a6fc4 100%);
+      color: #fff;
+      padding: 24px 40px;
+    }
+    header h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+    header p  { font-size: 13px; opacity: 0.82; margin-top: 4px; }
+    .header-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      margin-top: 8px;
+      letter-spacing: 0.4px;
+    }
+
+    /* â”€â”€ Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .layout {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 24px;
+      padding: 28px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; padding: 16px; }
+    }
+
+    /* â”€â”€ Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: var(--blue-dk);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    /* â”€â”€ Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .form-group {
+      margin-bottom: 14px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--sub);
+      margin-bottom: 5px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13.5px;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.15s;
+      appearance: none;
+    }
+    select:focus, input[type="number"]:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(26,111,196,0.12);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .form-hint { font-size: 11px; color: var(--sub); margin-top: 3px; }
+
+    /* Systems checklist */
+    .systems-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .sys-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .sys-item:hover { background: #f0f5ff; border-color: var(--blue); }
+    .sys-item input[type="checkbox"] { width: 15px; height: 15px; accent-color: var(--blue); cursor: pointer; }
+    .sys-item span { font-size: 12px; line-height: 1.3; }
+
+    /* Advanced toggle */
+    .advanced-toggle {
+      font-size: 12px;
+      color: var(--blue);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 10px 0 4px;
+      user-select: none;
+    }
+    .advanced-toggle svg { transition: transform 0.2s; }
+    .advanced-toggle.open svg { transform: rotate(90deg); }
+    #advanced-section { display: none; }
+    #advanced-section.open { display: block; }
+
+    /* Run button */
+    #run-btn {
+      width: 100%;
+      padding: 13px;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 16px;
+      transition: background 0.15s, transform 0.1s;
+      letter-spacing: 0.2px;
+    }
+    #run-btn:hover  { background: var(--blue-dk); }
+    #run-btn:active { transform: scale(0.98); }
+    #run-btn:disabled { background: #a0b0c8; cursor: not-allowed; }
+
+    /* Demo buttons */
+    .demo-bar {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .demo-btn {
+      font-size: 11px;
+      padding: 5px 10px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: #f0f4fb;
+      cursor: pointer;
+      color: var(--blue-dk);
+      font-weight: 600;
+      transition: background 0.12s;
+    }
+    .demo-btn:hover { background: #dce8f8; }
+
+    /* â”€â”€ Results panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    #results-panel { position: relative; }
+    #placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+      color: var(--sub);
+      font-size: 14px;
+      text-align: center;
+      gap: 12px;
+    }
+    #placeholder svg { opacity: 0.25; }
+
+    /* Spinner */
+    #spinner {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      gap: 14px;
+      font-size: 14px;
+      color: var(--sub);
+    }
+    #spinner.active { display: flex; }
+    .spin {
+      width: 42px; height: 42px;
+      border: 4px solid var(--border);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Error box */
+    #error-box {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: var(--red);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    #error-box.active { display: block; }
+
+    /* Portfolio summary strip */
+    #portfolio-strip {
+      display: none;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    #portfolio-strip.active { display: grid; }
+    @media (max-width: 700px) { #portfolio-strip { grid-template-columns: repeat(2,1fr); } }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+    .stat-label { font-size: 11px; font-weight: 600; color: var(--sub); text-transform: uppercase; letter-spacing: 0.3px; }
+    .stat-value { font-size: 22px; font-weight: 800; color: var(--text); margin: 4px 0 2px; letter-spacing: -0.5px; }
+    .stat-unit  { font-size: 11px; color: var(--sub); }
+    .stat-card.green  .stat-value { color: var(--green); }
+    .stat-card.blue   .stat-value { color: var(--blue); }
+    .stat-card.amber  .stat-value { color: var(--amber); }
+
+    /* Recommendation cards */
+    #recs-container { display: flex; flex-direction: column; gap: 12px; }
+
+    .rec-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: box-shadow 0.15s;
+    }
+    .rec-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+
+    /* Shadow rec cards */
+    .shadow-card {
+      background: #f8f9fb;
+      border: 1.5px dashed var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      opacity: 0.78;
+    }
+    .shadow-rank-badge {
+      background: #e4e8f0;
+      color: var(--sub);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .shadow-main { flex: 1; }
+    .shadow-desc { font-size: 13px; font-weight: 600; color: var(--sub); margin-bottom: 4px; }
+    .shadow-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--sub); }
+    .shadow-add-hint {
+      font-size: 11px;
+      color: var(--blue);
+      font-weight: 600;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+    .shadow-add-hint:hover { text-decoration: underline; }
+
+    .rec-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px 10px;
+      cursor: pointer;
+    }
+    .rec-rank {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .rec-rank.top3 { background: #d4750a; }
+    .rec-main { flex: 1; }
+    .rec-arc  { font-size: 11px; color: var(--sub); font-weight: 600; letter-spacing: 0.3px; }
+    .rec-desc { font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0 4px; line-height: 1.35; }
+    .rec-system-badge {
+      display: inline-block;
+      background: #eef3fc;
+      color: var(--blue-dk);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+    }
+    .rec-savings-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 16px 12px 60px;
+    }
+    .sav-item { display: flex; flex-direction: column; }
+    .sav-label { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+    .sav-value { font-size: 16px; font-weight: 800; color: var(--green); }
+    .sav-value.dollar { color: var(--blue-dk); }
+    .sav-value.co2    { color: var(--amber); }
+
+    /* Expandable details */
+    .rec-expand-toggle {
+      font-size: 11px;
+      color: var(--blue);
+      cursor: pointer;
+      padding: 0 16px 10px 60px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      user-select: none;
+    }
+    .rec-details {
+      display: none;
+      background: #f8faff;
+      border-top: 1px solid var(--border);
+      padding: 14px 16px;
+      font-size: 12.5px;
+    }
+    .rec-details.open { display: block; }
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 600px) { .details-grid { grid-template-columns: repeat(2,1fr); } }
+    .detail-item { display: flex; flex-direction: column; }
+    .detail-label { font-size: 10px; color: var(--sub); font-weight: 600; text-transform: uppercase; }
+    .detail-value { font-size: 14px; font-weight: 700; color: var(--text); }
+    .energy-range {
+      font-size: 11.5px;
+      color: var(--sub);
+      background: #eef3fc;
+      border-radius: 5px;
+      padding: 6px 10px;
+      display: inline-block;
+    }
+    .rec-subcat { font-size: 11.5px; color: var(--sub); margin-top: 6px; }
+
+    /* Progress bar for impl rate */
+    .impl-bar-wrap { margin-top: 4px; }
+    .impl-bar-track {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .impl-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: var(--green);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 11px;
+      color: var(--sub);
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>IAC Pre-Audit Energy Assessment Tool</h1>
+      <p>University of Louisiana at Lafayette · Industrial Assessment Centers Program</p>
+  <span class="header-badge">Models trained on 22,636 facilities Â· 167,991 IAC recommendations</span>
+</header>
+
+<div class="layout">
+  <!-- â”€â”€ LEFT: Input Form â”€â”€ -->
+  <div>
+    <div class="card">
+      <div class="card-title">Facility Profile</div>
+
+      <!-- Demo presets -->
+      <div class="demo-bar">
+        <span style="font-size:11px;color:var(--sub);align-self:center;font-weight:600;">Demo:</span>
+        <button class="demo-btn" onclick="loadDemo('food')">Food Processing</button>
+        <button class="demo-btn" onclick="loadDemo('petrochem')">Petrochemical</button>
+        <button class="demo-btn" onclick="loadDemo('metal')">Metal Mfg</button>
+        <button class="demo-btn" onclick="loadDemo('utility')">Utilities</button>
+      </div>
+
+      <form id="facility-form" onsubmit="return false;">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Industry Sector *</label>
+            <select id="sector"></select>
+          </div>
+          <div class="form-group">
+            <label>State *</label>
+            <select id="state"></select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Employees</label>
+            <input type="number" id="employees" min="1" placeholder="e.g. 120" />
+          </div>
+          <div class="form-group">
+            <label>Plant Area (sq ft)</label>
+            <input type="number" id="plant_area_sqft" min="100" placeholder="e.g. 110,000" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Annual Electricity (kWh)</label>
+            <input type="number" id="annual_elec_kwh" min="0" placeholder="e.g. 3,200,000" />
+          </div>
+          <div class="form-group">
+            <label>Annual Natural Gas (MMBtu)</label>
+            <input type="number" id="annual_gas_mmbtu" min="0" placeholder="e.g. 10,263" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Electricity Cost ($/yr)</label>
+            <input type="number" id="annual_elec_cost" min="0" placeholder="e.g. 320,000" />
+          </div>
+          <div class="form-group">
+            <label>Gas Cost ($/yr)</label>
+            <input type="number" id="annual_gas_cost" min="0" placeholder="e.g. 85,000" />
+          </div>
+        </div>
+
+        <div class="form-hint" style="margin-bottom:12px;">
+          Blank fields default to IAC training-set medians (120 employees, 3.2M kWh/yr, etc.)
+        </div>
+
+        <!-- Systems checklist -->
+        <div class="form-group">
+          <label>Energy Systems at Facility (select all that apply)</label>
+          <div class="systems-grid" id="systems-grid"></div>
+          <div class="form-hint">Selected systems boost recommendations for those categories.</div>
+        </div>
+
+        <!-- Advanced options -->
+        <div class="advanced-toggle" id="adv-toggle" onclick="toggleAdvanced()">
+          <svg width="10" height="10" viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9" fill="currentColor"/></svg>
+          Advanced options
+        </div>
+        <div id="advanced-section">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Top categories to show</label>
+              <select id="top_n_categories">
+                <option value="4">4</option>
+                <option value="6" selected>6 (default)</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Top ARCs per category</label>
+              <select id="top_n_per_cat">
+                <option value="2">2</option>
+                <option value="3" selected>3 (default)</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button id="run-btn" onclick="runAssessment()">Run Assessment</button>
+      </form>
+    </div>
+
+    <!-- Model info card -->
+    <div class="card" style="margin-top:16px;">
+      <div class="card-title" style="font-size:13px;">About the Models</div>
+      <table style="font-size:11.5px;width:100%;border-collapse:collapse;">
+        <tr>
+          <td style="padding:5px 0;font-weight:600;color:var(--sub);white-space:nowrap;width:90px;">Stage 1</td>
+          <td style="padding:5px 0;color:var(--text);">ARC category screening with calibrated probabilities</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 0;font-weight:600;color:var(--sub);">Stage 2</td>
+          <td style="padding:5px 0;color:var(--text);">Technical savings prediction with normalized facility and source-aware features</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 0;font-weight:600;color:var(--sub);">Value layer</td>
+          <td style="padding:5px 0;color:var(--text);">Current-value conversion using state price context and facility-scale guardrails</td>
+        </tr>
+      </table>
+      <div style="font-size:11px;color:var(--sub);margin-top:8px;">
+        Trained on the national IAC dataset. Recommendations are filtered by selected systems when possible,
+        and savings are constrained to remain reasonable for the facility scale provided.
+      </div>
+    </div>
+  </div>
+
+  <!-- â”€â”€ RIGHT: Results â”€â”€ -->
+  <div id="results-panel">
+
+    <!-- Placeholder -->
+    <div id="placeholder">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="36" r="34" stroke="#1a6fc4" stroke-width="2.5"/>
+        <path d="M24 44 L30 34 L36 38 L44 26 L50 30" stroke="#1a6fc4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="50" cy="28" r="3" fill="#1a6fc4"/>
+      </svg>
+      <div>
+        <strong>Fill in your facility details and click Run Assessment.</strong><br/>
+        <span style="font-size:12px;">Or try one of the demo presets on the left.</span>
+      </div>
+    </div>
+
+    <!-- Spinner -->
+    <div id="spinner">
+      <div class="spin"></div>
+      Running assessment â€” loading models and generating recommendationsâ€¦
+    </div>
+
+    <!-- Error box -->
+    <div id="error-box"></div>
+
+    <!-- Portfolio summary -->
+    <div id="portfolio-strip">
+      <div class="stat-card green">
+        <div class="stat-label">Total Energy Savings</div>
+        <div class="stat-value" id="p-energy">â€”</div>
+        <div class="stat-unit">MMBtu / year</div>
+      </div>
+      <div class="stat-card blue">
+        <div class="stat-label">Total Dollar Savings</div>
+        <div class="stat-value" id="p-dollar">â€”</div>
+        <div class="stat-unit">$ / year (estimated)</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="stat-label">COâ‚‚ Reduction</div>
+        <div class="stat-value" id="p-co2">â€”</div>
+        <div class="stat-unit">metric tons / year</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">% of Energy Use</div>
+        <div class="stat-value" id="p-pct">â€”</div>
+        <div class="stat-unit">savings potential</div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div id="recs-container"></div>
+
+    <!-- Shadow recommendations -->
+    <div id="shadow-section" style="display:none; margin-top:24px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <div style="flex:1;height:1px;background:var(--border);"></div>
+        <span style="font-size:12px;font-weight:700;color:var(--sub);letter-spacing:0.5px;text-transform:uppercase;white-space:nowrap;">Also common for similar facilities â€” system not selected</span>
+        <div style="flex:1;height:1px;background:var(--border);"></div>
+      </div>
+      <p style="font-size:12px;color:var(--sub);margin-bottom:12px;line-height:1.5;">
+        These recommendations rank highly for facilities like yours, but were filtered out because the system wasn't selected.
+        If you have this equipment, check the box on the left and re-run.
+      </p>
+      <div id="shadow-container" style="display:flex;flex-direction:column;gap:10px;"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  IAC Assessment Tool · University of Louisiana at Lafayette · Model outputs are estimates for screening purposes only.
+  Actual savings require on-site auditing. Data: IAC Database 1980â€“2024.
+</footer>
+
+<script>
+/* â”€â”€ Boot: load options from API â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+const API = "";   // Same-origin â€” empty string = relative URLs
+
+async function boot() {
+  try {
+    const res = await fetch(`${API}/api/options`);
+    const opts = await res.json();
+    populateSelect("sector", opts.sectors, "LA" /* just default state */);
+    populateSelect("state",  opts.states,  "LA");
+    populateSelect("sector", opts.sectors, "Food/Beverage/Tobacco");
+    buildSystemsGrid(opts.systems);
+  } catch(e) {
+    console.error("Failed to load options:", e);
+    // Fallback: show error
+    document.getElementById("error-box").textContent =
+      "Could not connect to the API server. Make sure api.py is running on port 8000.";
+    document.getElementById("error-box").classList.add("active");
+  }
+}
+
+function populateSelect(id, items, defaultVal) {
+  const sel = document.getElementById(id);
+  sel.innerHTML = "";
+  items.forEach(v => {
+    const o = document.createElement("option");
+    o.value = v;
+    o.textContent = v;
+    if (v === defaultVal) o.selected = true;
+    sel.appendChild(o);
+  });
+}
+
+function buildSystemsGrid(systems) {
+  const grid = document.getElementById("systems-grid");
+  grid.innerHTML = "";
+  systems.forEach(sys => {
+    const div = document.createElement("label");
+    div.className = "sys-item";
+    div.innerHTML = `<input type="checkbox" value="${sys}"> <span>${sys}</span>`;
+    grid.appendChild(div);
+  });
+}
+
+/* â”€â”€ Demo presets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+const DEMOS = {
+  food: {
+    sector: "Food/Beverage/Tobacco", state: "LA",
+    employees: 250, plant_area_sqft: 150000,
+    annual_elec_kwh: 5000000, annual_gas_mmbtu: 15000,
+    annual_elec_cost: 450000, annual_gas_cost: 120000,
+    systems: ["Boilers & Steam System","Lighting (interior/exterior)","Compressed Air System"],
+  },
+  petrochem: {
+    sector: "Chemical/Plastics/Paper/Rubber", state: "LA",
+    employees: 800, plant_area_sqft: 500000,
+    annual_elec_kwh: 25000000, annual_gas_mmbtu: 120000,
+    annual_elec_cost: 2100000, annual_gas_cost: 850000,
+    systems: ["Process Heating / Furnaces","Heat Recovery","Electrical Distribution"],
+  },
+  metal: {
+    sector: "Metal/Machinery/Electronics", state: "LA",
+    employees: 320, plant_area_sqft: 200000,
+    annual_elec_kwh: 8000000, annual_gas_mmbtu: 20000,
+    annual_elec_cost: 680000, annual_gas_cost: 160000,
+    systems: ["Electric Motors & Drives","Compressed Air System","Lighting (interior/exterior)"],
+  },
+  utility: {
+    sector: "Utilities", state: "LA",
+    employees: 150, plant_area_sqft: 80000,
+    annual_elec_kwh: 12000000, annual_gas_mmbtu: 50000,
+    annual_elec_cost: 900000, annual_gas_cost: 320000,
+    systems: ["Electric Motors & Drives","Operations & Scheduling"],
+  },
+};
+
+function loadDemo(key) {
+  const d = DEMOS[key];
+  if (!d) return;
+  setField("sector",         d.sector);
+  setField("state",          d.state);
+  setField("employees",      d.employees);
+  setField("plant_area_sqft",d.plant_area_sqft);
+  setField("annual_elec_kwh",d.annual_elec_kwh);
+  setField("annual_gas_mmbtu",d.annual_gas_mmbtu);
+  setField("annual_elec_cost",d.annual_elec_cost);
+  setField("annual_gas_cost",  d.annual_gas_cost);
+
+  // Reset all checkboxes, then check the ones for this demo
+  document.querySelectorAll("#systems-grid input[type='checkbox']").forEach(cb => {
+    cb.checked = (d.systems || []).includes(cb.value);
+  });
+}
+
+function setField(id, val) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (el.tagName === "SELECT") {
+    for (let opt of el.options) {
+      if (opt.value === val) { opt.selected = true; break; }
+    }
+  } else {
+    el.value = val ?? "";
+  }
+}
+
+/* â”€â”€ Advanced toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+function toggleAdvanced() {
+  const sec = document.getElementById("advanced-section");
+  const tog = document.getElementById("adv-toggle");
+  sec.classList.toggle("open");
+  tog.classList.toggle("open");
+}
+
+/* â”€â”€ Run assessment â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+async function runAssessment() {
+  // Gather inputs
+  const payload = {
+    sector:           document.getElementById("sector").value,
+    state:            document.getElementById("state").value,
+    employees:        intOrNull("employees"),
+    plant_area_sqft:  intOrNull("plant_area_sqft"),
+    annual_elec_kwh:  floatOrNull("annual_elec_kwh"),
+    annual_gas_mmbtu: floatOrNull("annual_gas_mmbtu"),
+    annual_elec_cost: floatOrNull("annual_elec_cost"),
+    annual_gas_cost:  floatOrNull("annual_gas_cost"),
+    systems_present:  Array.from(
+      document.querySelectorAll("#systems-grid input:checked")
+    ).map(cb => cb.value),
+    top_n_categories: parseInt(document.getElementById("top_n_categories").value),
+    top_n_per_cat:    parseInt(document.getElementById("top_n_per_cat").value),
+  };
+
+  if (!payload.sector || !payload.state) {
+    showError("Please select a Sector and State.");
+    return;
+  }
+
+  // UI state
+  setLoading(true);
+  clearResults();
+
+  try {
+    const res = await fetch(`${API}/api/assess`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.detail || `Server error ${res.status}`);
+    }
+    const data = await res.json();
+    renderResults(data);
+  } catch(e) {
+    showError(e.message || "Unknown error. Check that the API server is running.");
+  } finally {
+    setLoading(false);
+  }
+}
+
+function intOrNull(id) {
+  const v = document.getElementById(id).value;
+  const n = parseInt(v);
+  return (v && !isNaN(n) && n > 0) ? n : null;
+}
+function floatOrNull(id) {
+  const v = document.getElementById(id).value;
+  const n = parseFloat(v);
+  return (v && !isNaN(n) && n >= 0) ? n : null;
+}
+
+/* â”€â”€ UI helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+function setLoading(on) {
+  document.getElementById("run-btn").disabled = on;
+  document.getElementById("run-btn").textContent = on ? "Runningâ€¦" : "Run Assessment";
+  document.getElementById("placeholder").style.display = on ? "none" : "";
+  document.getElementById("spinner").classList.toggle("active", on);
+}
+function clearResults() {
+  document.getElementById("error-box").classList.remove("active");
+  document.getElementById("portfolio-strip").classList.remove("active");
+  document.getElementById("recs-container").innerHTML = "";
+  document.getElementById("shadow-container").innerHTML = "";
+  document.getElementById("shadow-section").style.display = "none";
+}
+function showError(msg) {
+  clearResults();
+  document.getElementById("placeholder").style.display = "none";
+  const box = document.getElementById("error-box");
+  box.textContent = "Error: " + msg;
+  box.classList.add("active");
+}
+
+/* â”€â”€ Render results â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+function renderResults(data) {
+  document.getElementById("placeholder").style.display = "none";
+
+  // Portfolio strip
+  const p = data.portfolio;
+  document.getElementById("p-energy").textContent = fmt(p.total_energy_mmbtu, 0);
+  document.getElementById("p-dollar").textContent = "$" + fmt(p.total_dollar_savings, 0);
+  document.getElementById("p-co2").textContent    = fmt(p.total_co2_mt, 0);
+  document.getElementById("p-pct").textContent    = p.savings_pct_of_usage.toFixed(1) + "%";
+  document.getElementById("portfolio-strip").classList.add("active");
+
+  // Recommendations
+  const container = document.getElementById("recs-container");
+  container.innerHTML = "";
+
+  if (!data.recommendations || data.recommendations.length === 0) {
+    container.innerHTML = `<div class="card" style="padding:24px;color:var(--sub);text-align:center;">
+      No recommendations generated â€” try adjusting sector/state or selecting systems.</div>`;
+    return;
+  }
+
+  data.recommendations.forEach((rec, idx) => {
+    const card = buildRecCard(rec, idx);
+    container.appendChild(card);
+  });
+
+  // Shadow recommendations
+  if (data.shadow_recs && data.shadow_recs.length > 0) {
+    document.getElementById("shadow-section").style.display = "block";
+    const shadowContainer = document.getElementById("shadow-container");
+    data.shadow_recs.forEach(rec => {
+      shadowContainer.appendChild(buildShadowCard(rec));
+    });
+  }
+}
+
+function buildRecCard(rec, idx) {
+  const isTop3  = rec.rank <= 3;
+  const rankCls = isTop3 ? "rec-rank top3" : "rec-rank";
+  const implPct = Math.round(rec.impl_rate_hist * 100);
+  const barW    = Math.min(100, implPct);
+
+  const el = document.createElement("div");
+  el.className = "rec-card";
+  el.innerHTML = `
+    <div class="rec-header" onclick="toggleDetail(${idx})">
+      <div class="${rankCls}">#${rec.rank}</div>
+      <div class="rec-main">
+        <div class="rec-arc">ARC ${rec.arc_code}</div>
+        <div class="rec-desc">${rec.description}</div>
+        <span class="rec-system-badge">${rec.arc_system}</span>
+        ${rec.system_selected ? '<span style="margin-left:6px;background:#d4f5e1;color:#1a6a3a;border-radius:4px;font-size:10px;font-weight:700;padding:2px 7px;letter-spacing:0.3px;">YOUR SYSTEM</span>' : ''}
+      </div>
+    </div>
+
+    <div class="rec-savings-row">
+      <div class="sav-item">
+        <span class="sav-label">Energy Savings</span>
+        <span class="sav-value">${fmt(rec.energy_mmbtu_model, 0)} <span style="font-size:12px;font-weight:400;">MMBtu/yr</span></span>
+      </div>
+      <div class="sav-item">
+        <span class="sav-label">Dollar Savings</span>
+        <span class="sav-value dollar">$${fmt(rec.dollar_model, 0)}<span style="font-size:12px;font-weight:400;">/yr</span></span>
+      </div>
+      ${rec.payback_est_yrs ? `
+      <div class="sav-item">
+        <span class="sav-label">Est. Payback</span>
+        <span class="sav-value co2">${rec.payback_est_yrs} <span style="font-size:12px;font-weight:400;">yrs</span></span>
+      </div>` : ""}
+    </div>
+
+    <div class="rec-expand-toggle" onclick="toggleDetail(${idx})">
+      <svg width="9" height="9" viewBox="0 0 9 9" id="toggle-arrow-${idx}"><polygon points="1,1 8,4.5 1,8" fill="currentColor"/></svg>
+      Details
+    </div>
+
+    <div class="rec-details" id="rec-detail-${idx}">
+      <div class="details-grid">
+        <div class="detail-item">
+          <span class="detail-label">Impl. Rate (Historical)</span>
+          <span class="detail-value">${implPct}%</span>
+          <div class="impl-bar-wrap">
+            <div class="impl-bar-track">
+              <div class="impl-bar-fill" style="width:${barW}%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Historical Recs (n)</span>
+          <span class="detail-value">${rec.n_historical.toLocaleString()}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Category Probability</span>
+          <span class="detail-value">${(rec.p_category * 100).toFixed(1)}%</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Composite Score</span>
+          <span class="detail-value">${rec.composite_score.toFixed(4)}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Median Hist. Dollar</span>
+          <span class="detail-value">$${fmt(rec.dollar_median_hist, 0)}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">ARC 2-Digit</span>
+          <span class="detail-value">${rec.arc_2digit}</span>
+        </div>
+      </div>
+
+      <div class="energy-range">
+        Energy savings range (25thâ€“75th pct): ${fmt(rec.energy_mmbtu_p25, 0)} â€“ ${fmt(rec.energy_mmbtu_p75, 0)} MMBtu/yr
+        &nbsp;Â·&nbsp; Median historical: ${fmt(rec.energy_mmbtu_median, 0)} MMBtu/yr
+      </div>
+
+      ${rec.subcategory ? `<div class="rec-subcat">Subcategory: ${rec.subcategory}</div>` : ""}
+    </div>
+  `;
+  return el;
+}
+
+function toggleDetail(idx) {
+  const panel = document.getElementById(`rec-detail-${idx}`);
+  const arrow = document.getElementById(`toggle-arrow-${idx}`);
+  if (!panel) return;
+  panel.classList.toggle("open");
+  if (arrow) {
+    arrow.style.transform = panel.classList.contains("open") ? "rotate(90deg)" : "";
+  }
+}
+
+/* â”€â”€ Number formatter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+function fmt(n, decimals) {
+  if (n === null || n === undefined || isNaN(n)) return "â€”";
+  return Number(n).toLocaleString("en-US", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+}
+
+/* â”€â”€ Shadow rec card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+function buildShadowCard(rec) {
+  const implPct = Math.round(rec.impl_rate_hist * 100);
+  const el = document.createElement("div");
+  el.className = "shadow-card";
+  el.innerHTML = `
+    <div class="shadow-rank-badge">
+      Would be<br/>#${rec.shadow_rank}
+    </div>
+    <div class="shadow-main">
+      <div style="font-size:11px;color:var(--sub);font-weight:600;margin-bottom:2px;">ARC ${rec.arc_code} Â· ${rec.arc_system}</div>
+      <div class="shadow-desc">${rec.description}</div>
+      <div class="shadow-meta">
+        <span>Energy: <strong>${fmt(rec.energy_mmbtu_model,0)} MMBtu/yr</strong></span>
+        <span>Savings: <strong>$${fmt(rec.dollar_model,0)}/yr</strong></span>
+        <span>Hist. impl rate: <strong>${implPct}%</strong></span>
+        <span>Based on <strong>${rec.n_historical.toLocaleString()}</strong> similar facilities</span>
+      </div>
+      <div class="shadow-add-hint" onclick="checkSystemAndRerun('${rec.shadow_system_needed}')">
+        + Check "${rec.shadow_system_needed}" if this system exists at your facility
+      </div>
+    </div>
+  `;
+  return el;
+}
+
+function checkSystemAndRerun(sysName) {
+  // Find the checkbox with this value and check it
+  const cbs = document.querySelectorAll("#systems-grid input[type='checkbox']");
+  for (const cb of cbs) {
+    if (cb.value === sysName) {
+      cb.checked = true;
+      // Scroll to the checkbox
+      cb.closest(".sys-item").scrollIntoView({ behavior: "smooth", block: "center" });
+      cb.closest(".sys-item").style.background = "#dce8f8";
+      setTimeout(() => cb.closest(".sys-item").style.background = "", 1500);
+      break;
+    }
+  }
+}
+
+/* â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+boot();
+</script>
+</body>
+</html>
+

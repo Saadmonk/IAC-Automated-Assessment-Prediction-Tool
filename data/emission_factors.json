@@ -1,0 +1,9 @@
+{
+  "natural_gas": 53.06,
+  "petroleum": 74.14,
+  "coal": 95.35,
+  "electricity": 131.88,
+  "biomass_wood": 93.8,
+  "biomass_paper": 105.51,
+  "weighted": 59.92
+}

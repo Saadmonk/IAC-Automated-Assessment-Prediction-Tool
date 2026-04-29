@@ -1,0 +1,91 @@
+{
+  "fy_min": 1981,
+  "fy_max": 2026,
+  "default_fy": 2024,
+  "global_energy_frac_q90": 0.06198289330537135,
+  "global_value_frac_q90": 0.08058396767476801,
+  "facility_energy_frac_q90": 0.3652367246671767,
+  "facility_value_frac_q90": 0.4979580378612124,
+  "sector_facility_caps": {
+    "Administrative Services": {
+      "energy_frac_q90": 0.37159896403766257,
+      "value_frac_q90": 0.6227856320849671,
+      "n_facilities": 27
+    },
+    "Agriculture/Forestry/Fishing": {
+      "energy_frac_q90": 0.8494984225497492,
+      "value_frac_q90": 1.5243043339291826,
+      "n_facilities": 40
+    },
+    "Arts/Entertainment": {
+      "energy_frac_q90": 0.5274108054681785,
+      "value_frac_q90": 0.43738436518042006,
+      "n_facilities": 47
+    },
+    "Chemical/Plastics/Paper/Rubber": {
+      "energy_frac_q90": 0.38208589432893697,
+      "value_frac_q90": 0.5229662115079299,
+      "n_facilities": 3483
+    },
+    "Educational Services": {
+      "energy_frac_q90": 0.7086181583163365,
+      "value_frac_q90": 0.965567744832775,
+      "n_facilities": 133
+    },
+    "Food/Beverage/Tobacco": {
+      "energy_frac_q90": 0.381483388986455,
+      "value_frac_q90": 0.5320457056189815,
+      "n_facilities": 1842
+    },
+    "Health Care": {
+      "energy_frac_q90": 0.6844464164133538,
+      "value_frac_q90": 0.5848644074861972,
+      "n_facilities": 52
+    },
+    "Information": {
+      "energy_frac_q90": 0.47062658034784977,
+      "value_frac_q90": 0.5515775940019414,
+      "n_facilities": 48
+    },
+    "Metal/Machinery/Electronics": {
+      "energy_frac_q90": 0.3961293285178639,
+      "value_frac_q90": 0.5036840027452036,
+      "n_facilities": 5200
+    },
+    "Mining/Oil & Gas": {
+      "energy_frac_q90": 0.8393687900472877,
+      "value_frac_q90": 1.2830819721490265,
+      "n_facilities": 47
+    },
+    "Other Services": {
+      "energy_frac_q90": 0.5583828734737638,
+      "value_frac_q90": 0.5976897800283738,
+      "n_facilities": 46
+    },
+    "Professional Services": {
+      "energy_frac_q90": 0.689085034457094,
+      "value_frac_q90": 0.4643122596175787,
+      "n_facilities": 31
+    },
+    "Public Administration": {
+      "energy_frac_q90": 0.4392346083122262,
+      "value_frac_q90": 0.7797706515486791,
+      "n_facilities": 30
+    },
+    "Unknown": {
+      "energy_frac_q90": 0.3121656523516775,
+      "value_frac_q90": 0.45491071892502133,
+      "n_facilities": 11006
+    },
+    "Utilities": {
+      "energy_frac_q90": 0.582784003403869,
+      "value_frac_q90": 0.8456569196252961,
+      "n_facilities": 426
+    },
+    "Wholesale Trade": {
+      "energy_frac_q90": 0.6714716617964844,
+      "value_frac_q90": 0.7230967902627949,
+      "n_facilities": 68
+    }
+  }
+}
