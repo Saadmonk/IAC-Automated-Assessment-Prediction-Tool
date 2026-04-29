@@ -79,6 +79,22 @@ MMBTU_PER_KWH = 0.003412
 _cache: dict[str, object] = {}
 
 
+def _json_safe(value):
+    if isinstance(value, dict):
+        return {k: _json_safe(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_json_safe(v) for v in value]
+    if isinstance(value, tuple):
+        return [_json_safe(v) for v in value]
+    if isinstance(value, (np.floating, float)):
+        if not np.isfinite(value):
+            return None
+        return float(value)
+    if isinstance(value, (np.integer, int)):
+        return int(value)
+    return value
+
+
 def _load() -> dict[str, object]:
     if _cache.get("ready"):
         return _cache
@@ -484,12 +500,12 @@ def run_assessment(facility: dict, top_n_categories: int = 6, top_n_per_cat: int
             candidates.append(_build_recommendation(candidate_row, float(p_row["probability"]), selected_systems, scale_context, cache))
 
     if not candidates:
-        return {
+        return _json_safe({
             "recommendations": [],
             "shadow_recs": [],
             "portfolio": _portfolio_summary([], scale_context, portfolio_caps, cache),
             "facility_summary": _facility_summary(facility_df.iloc[0].to_dict(), facility, scale_context),
-        }
+        })
 
     candidate_df = pd.DataFrame(candidates).sort_values("composite_score", ascending=False)
     candidate_df = candidate_df.drop_duplicates("arc_code", keep="first").reset_index(drop=True)
@@ -525,12 +541,12 @@ def run_assessment(facility: dict, top_n_categories: int = 6, top_n_per_cat: int
         rec["shadow_rank"] = rec.get("shadow_rank") or idx
         rec["is_shadow"] = True
 
-    return {
+    return _json_safe({
         "recommendations": selected_main,
         "shadow_recs": shadow_recs,
         "portfolio": _portfolio_summary(selected_main, scale_context, portfolio_caps, cache),
         "facility_summary": _facility_summary(facility_df.iloc[0].to_dict(), facility, scale_context),
-    }
+    })
 
 
 def _portfolio_summary(recommendations: list[dict], scale_context: dict, portfolio_caps: dict, cache: dict[str, object]) -> dict:
@@ -585,4 +601,3 @@ def _facility_summary(filled_row: dict, raw_facility: dict, scale_context: dict)
         "annual_utility_spend_basis": scale_context["annual_utility_spend_basis"],
         "systems_present": raw_facility.get("systems_present", []) or [],
     }
-
