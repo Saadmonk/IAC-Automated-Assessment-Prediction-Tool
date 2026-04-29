@@ -576,24 +576,24 @@
     <!-- Portfolio summary -->
     <div id="portfolio-strip">
       <div class="stat-card green">
-        <div class="stat-label">Total Energy Savings</div>
+        <div class="stat-label">Expected Energy Savings</div>
         <div class="stat-value" id="p-energy">â€”</div>
-        <div class="stat-unit">MMBtu / year</div>
+        <div class="stat-unit" id="p-energy-note">MMBtu / year</div>
       </div>
       <div class="stat-card blue">
-        <div class="stat-label">Total Dollar Savings</div>
+        <div class="stat-label">Expected Dollar Savings</div>
         <div class="stat-value" id="p-dollar">â€”</div>
-        <div class="stat-unit">$ / year (estimated)</div>
+        <div class="stat-unit" id="p-dollar-note">$ / year (estimated)</div>
       </div>
       <div class="stat-card amber">
-        <div class="stat-label">COâ‚‚ Reduction</div>
+        <div class="stat-label">Expected COâ‚‚ Reduction</div>
         <div class="stat-value" id="p-co2">â€”</div>
-        <div class="stat-unit">metric tons / year</div>
+        <div class="stat-unit" id="p-co2-note">metric tons / year</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">% of Energy Use</div>
+        <div class="stat-label">Expected % of Energy Use</div>
         <div class="stat-value" id="p-pct">â€”</div>
-        <div class="stat-unit">savings potential</div>
+        <div class="stat-unit" id="p-pct-note">probability-weighted</div>
       </div>
     </div>
 
@@ -822,10 +822,14 @@ function renderResults(data) {
 
   // Portfolio strip
   const p = data.portfolio;
-  document.getElementById("p-energy").textContent = fmt(p.total_energy_mmbtu, 0);
-  document.getElementById("p-dollar").textContent = "$" + fmt(p.total_dollar_savings, 0);
-  document.getElementById("p-co2").textContent    = fmt(p.total_co2_mt, 0);
-  document.getElementById("p-pct").textContent    = p.savings_pct_of_usage.toFixed(1) + "%";
+  document.getElementById("p-energy").textContent = `${fmt(p.total_energy_mmbtu, 0)} (${fmt(p.total_energy_mmbtu_potential, 0)})`;
+  document.getElementById("p-dollar").textContent = `$${fmt(p.total_dollar_savings, 0)} ($${fmt(p.total_dollar_savings_potential, 0)})`;
+  document.getElementById("p-co2").textContent    = `${fmt(p.total_co2_mt, 0)} (${fmt(p.total_co2_mt_potential, 0)})`;
+  document.getElementById("p-pct").textContent    = `${p.savings_pct_of_usage.toFixed(1)}% (${p.savings_pct_of_usage_potential.toFixed(1)}%)`;
+  document.getElementById("p-energy-note").textContent = "expected (potential) MMBtu / year";
+  document.getElementById("p-dollar-note").textContent = "expected (potential) $ / year";
+  document.getElementById("p-co2-note").textContent = "expected (potential) metric tons / year";
+  document.getElementById("p-pct-note").textContent = "probability-weighted using category probability";
   document.getElementById("portfolio-strip").classList.add("active");
 
   // Recommendations
@@ -876,10 +880,12 @@ function buildRecCard(rec, idx) {
       <div class="sav-item">
         <span class="sav-label">Energy Savings</span>
         <span class="sav-value">${fmt(rec.energy_mmbtu_model, 0)} <span style="font-size:12px;font-weight:400;">MMBtu/yr</span></span>
+        <div style="font-size:11px;color:var(--sub);margin-top:2px;">Expected: ${fmt(rec.energy_mmbtu_expected, 0)} MMBtu/yr</div>
       </div>
       <div class="sav-item">
         <span class="sav-label">Dollar Savings</span>
         <span class="sav-value dollar">$${fmt(rec.dollar_model, 0)}<span style="font-size:12px;font-weight:400;">/yr</span></span>
+        <div style="font-size:11px;color:var(--sub);margin-top:2px;">Expected: $${fmt(rec.dollar_expected, 0)}/yr</div>
       </div>
       ${rec.payback_est_yrs ? `
       <div class="sav-item">
@@ -913,6 +919,10 @@ function buildRecCard(rec, idx) {
           <span class="detail-value">${(rec.p_category * 100).toFixed(1)}%</span>
         </div>
         <div class="detail-item">
+          <span class="detail-label">Expected Dollar Value</span>
+          <span class="detail-value">$${fmt(rec.dollar_expected, 0)}</span>
+        </div>
+        <div class="detail-item">
           <span class="detail-label">Composite Score</span>
           <span class="detail-value">${rec.composite_score.toFixed(4)}</span>
         </div>
@@ -929,6 +939,10 @@ function buildRecCard(rec, idx) {
       <div class="energy-range">
         Energy savings range (25thâ€“75th pct): ${fmt(rec.energy_mmbtu_p25, 0)} â€“ ${fmt(rec.energy_mmbtu_p75, 0)} MMBtu/yr
         &nbsp;Â·&nbsp; Median historical: ${fmt(rec.energy_mmbtu_median, 0)} MMBtu/yr
+      </div>
+
+      <div class="energy-range">
+        Expected values use the ARC category probability as a weighting factor. The main savings values above are the full modeled savings for this recommendation.
       </div>
 
       ${rec.subcategory ? `<div class="rec-subcat">Subcategory: ${rec.subcategory}</div>` : ""}

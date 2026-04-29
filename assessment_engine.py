@@ -446,6 +446,8 @@ def _build_recommendation(candidate_row: pd.Series, cat_prob: float, selected_sy
     composite = float(cat_prob) * float(candidate_row["impl_rate"]) * savings_term
     payback = float(guard_row.get("payback_median", np.nan))
     payback_out = round(payback, 1) if np.isfinite(payback) and 0 < payback <= 50 else None
+    expected_energy = float(cat_prob) * energy_value
+    expected_dollar = float(cat_prob) * dollar_value
 
     return {
         "arc_code": arc_code,
@@ -460,6 +462,8 @@ def _build_recommendation(candidate_row: pd.Series, cat_prob: float, selected_sy
         "composite_score": round(composite, 4),
         "energy_mmbtu_model": round(energy_value, 1),
         "dollar_model": round(dollar_value, 0),
+        "energy_mmbtu_expected": round(expected_energy, 1),
+        "dollar_expected": round(expected_dollar, 0),
         "energy_mmbtu_raw": round(raw_energy, 1),
         "dollar_model_raw": round(raw_value, 0),
         "energy_mmbtu_p25": round(float(guard_row.get("energy_p25", 0.0)), 1),
@@ -554,36 +558,64 @@ def _portfolio_summary(recommendations: list[dict], scale_context: dict, portfol
         return {
             "total_recommendations": 0,
             "total_energy_mmbtu": 0.0,
+            "total_energy_mmbtu_potential": 0.0,
             "total_dollar_savings": 0.0,
+            "total_dollar_savings_potential": 0.0,
             "total_co2_mt": 0.0,
+            "total_co2_mt_potential": 0.0,
             "savings_pct_of_usage": 0.0,
+            "savings_pct_of_usage_potential": 0.0,
             "savings_pct_of_bill": 0.0,
+            "savings_pct_of_bill_potential": 0.0,
             "top_system": None,
             "annual_utility_spend_usd": round(float(scale_context["annual_utility_spend_usd"]), 0),
             "annual_utility_spend_basis": scale_context["annual_utility_spend_basis"],
             "portfolio_energy_cap_pct": round(float(portfolio_caps["energy_frac_cap"]) * 100.0, 1),
             "portfolio_value_cap_pct": round(float(portfolio_caps["value_frac_cap"]) * 100.0, 1),
+            "portfolio_total_style": "expected_value",
+            "probability_note": "Expected totals weight each recommendation by the predicted ARC category probability.",
         }
-    raw_total_energy = float(sum(x["energy_mmbtu_model"] for x in recommendations))
-    raw_total_value = float(sum(x["dollar_model"] for x in recommendations))
-    total_energy = min(raw_total_energy, float(portfolio_caps["energy_abs_cap"]))
-    total_value = min(raw_total_value, float(portfolio_caps["value_abs_cap"]))
+    raw_total_energy_potential = float(sum(x["energy_mmbtu_model"] for x in recommendations))
+    raw_total_value_potential = float(sum(x["dollar_model"] for x in recommendations))
+    raw_total_energy_expected = float(sum(x.get("energy_mmbtu_expected", 0.0) for x in recommendations))
+    raw_total_value_expected = float(sum(x.get("dollar_expected", 0.0) for x in recommendations))
+
+    total_energy_potential = min(raw_total_energy_potential, float(portfolio_caps["energy_abs_cap"]))
+    total_value_potential = min(raw_total_value_potential, float(portfolio_caps["value_abs_cap"]))
+    total_energy = min(raw_total_energy_expected, float(portfolio_caps["energy_abs_cap"]))
+    total_value = min(raw_total_value_expected, float(portfolio_caps["value_abs_cap"]))
+
     total_co2 = total_energy * float(cache["weighted_emission_factor"]) / 1000.0
+    total_co2_potential = total_energy_potential * float(cache["weighted_emission_factor"]) / 1000.0
     usage_pct = 100.0 * total_energy / max(float(scale_context["total_site_energy_mmbtu"]), 1e-6)
+    usage_pct_potential = 100.0 * total_energy_potential / max(float(scale_context["total_site_energy_mmbtu"]), 1e-6)
     bill_pct = 100.0 * total_value / max(float(scale_context["annual_utility_spend_usd"]), 1e-6)
+    bill_pct_potential = 100.0 * total_value_potential / max(float(scale_context["annual_utility_spend_usd"]), 1e-6)
     return {
         "total_recommendations": len(recommendations),
         "total_energy_mmbtu": round(total_energy, 1),
+        "total_energy_mmbtu_potential": round(total_energy_potential, 1),
         "total_dollar_savings": round(total_value, 0),
+        "total_dollar_savings_potential": round(total_value_potential, 0),
         "total_co2_mt": round(total_co2, 2),
+        "total_co2_mt_potential": round(total_co2_potential, 2),
         "savings_pct_of_usage": round(usage_pct, 1),
+        "savings_pct_of_usage_potential": round(usage_pct_potential, 1),
         "savings_pct_of_bill": round(bill_pct, 1),
+        "savings_pct_of_bill_potential": round(bill_pct_potential, 1),
         "top_system": recommendations[0]["arc_system"],
         "annual_utility_spend_usd": round(float(scale_context["annual_utility_spend_usd"]), 0),
         "annual_utility_spend_basis": scale_context["annual_utility_spend_basis"],
         "portfolio_energy_cap_pct": round(float(portfolio_caps["energy_frac_cap"]) * 100.0, 1),
         "portfolio_value_cap_pct": round(float(portfolio_caps["value_frac_cap"]) * 100.0, 1),
-        "portfolio_guard_applied": (total_energy + 1e-9 < raw_total_energy) or (total_value + 1e-9 < raw_total_value),
+        "portfolio_total_style": "expected_value",
+        "probability_note": "Expected totals weight each recommendation by the predicted ARC category probability.",
+        "portfolio_guard_applied": (
+            (total_energy_potential + 1e-9 < raw_total_energy_potential)
+            or (total_value_potential + 1e-9 < raw_total_value_potential)
+            or (total_energy + 1e-9 < raw_total_energy_expected)
+            or (total_value + 1e-9 < raw_total_value_expected)
+        ),
     }
 
 
